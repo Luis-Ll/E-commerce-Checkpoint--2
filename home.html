@@ -28,13 +28,17 @@
       </div>
 
       <ul class="navbar-nav flex-row">
-        <li class="nav-item me-3 me-lg-0">
-          <a class="nav-link" href="#" role="button" data-mdb-toggle="sidenav" data-mdb-target="#sidenav-1"
-            class="btn shadow-0 p-0 me-3" aria-controls="#sidenav-1" aria-haspopup="true">
-            <i class="fas fa-bars me-1"></i>
-            <span>Categorias</span>
+        <div class="dropdown">
+          <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+           Categorias
           </a>
-        </li>
+        
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <li><a class="dropdown-item" href="#">Acción</a></li>
+            <li><a class="dropdown-item" href="#">Otra acción</a></li>
+            <li><a class="dropdown-item" href="#">Algo más aqui</a></li>
+          </ul>
+        </div>
         <!-- Badge -->
         <li class="nav-item me-3 me-lg-0">
           <a class="nav-link" href="#">
@@ -88,18 +92,26 @@
     </head>
     <main>
          <section style="background-color: #eee;">
-            <div id="carouselExampleSlidesOnly" class="carousel slide" data-mdb-ride="carousel">
+              <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                   <div class="carousel-item active">
-                    <img src="/assets/R (3).jfif" class="d-block w-100" alt="Wild Landscape" height="600px"/>
+                    <img src="https://mdbcdn.b-cdn.net/img/new/slides/041.webp" class="d-block w-100" alt="...">
                   </div>
                   <div class="carousel-item">
-                    <img src="https://mdbcdn.b-cdn.net/img/new/slides/042.webp" class="d-block w-100" alt="Camera"/>
+                    <img src="https://mdbcdn.b-cdn.net/img/new/slides/042.webp" class="d-block w-100" alt="...">
                   </div>
                   <div class="carousel-item">
-                    <img src="https://mdbcdn.b-cdn.net/img/new/slides/043.webp" class="d-block w-100" alt="Exotic Fruits"/>
+                    <img src="https://mdbcdn.b-cdn.net/img/new/slides/043.webp" class="d-block w-100" alt="...">
                   </div>
                 </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
               </div>
 
             <div class="text-center container py-5">
