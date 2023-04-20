@@ -1,0 +1,29 @@
+.form{
+    margin: 15%;
+    margin-top: 10%;
+    margin-bottom: 5%;
+    background-color: rgba(70, 70, 70, 0.598);
+    padding: 5%;
+    color: rgb(255, 255, 255);
+}
+
+body{
+    background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(https://www.prensalibre.com/wp-content/uploads/2019/07/shutterstock_415715713.jpg?quality=52&w=760&h=430&crop=1);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+
+.form-text{
+    color: rgba(255, 255, 255, 0.845);
+}
+
+a{
+    text-decoration: none;
+}
+
+.logo-mystic{
+    padding-left: 10%;
+}
