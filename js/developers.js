@@ -51,7 +51,7 @@ const renderDev = (developers) => {
                 ><i class="text_footer icon_git fs-3 fa-brands fa-github"></i
               ></a>
               <a href="${developers[i].urlLinkedin}"
-                  ><i class="fa-brands fa-linkedin fs-3 fa-brands"></i></a>
+                  ><i class="fa-brands fa-linkedin icon_linkedin fs-3 fa-brands"></i></a>
              </div>
                
         

@@ -16,3 +16,19 @@
 .dropdown{
   padding-bottom: 3%;
 }
+
+/**Footer style**/
+.icon_git{
+  color:gray
+}
+.icon_git:hover {
+  color: black;
+  zoom: 120%;
+}
+.icon_linkedin{
+  color:grey
+}
+.icon_linkedin:hover {
+  color: rgb(9, 87, 231);
+  zoom: 120%;
+}
