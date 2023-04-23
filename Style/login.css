@@ -5,7 +5,15 @@
     background-color: rgba(70, 70, 70, 0.598);
     padding: 5%;
     color: rgb(255, 255, 255);
+    align-items: center;
+
 }
+
+@media screen and (max-width:900px){
+    .form{
+      margin-top:80px;
+    }
+  }
 
 body{
     background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
