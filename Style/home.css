@@ -9,7 +9,49 @@
     display: block;
   }
   
+  .fas {
+    color: #000000;
+  }
+
   .dropdown-menu > .dropdown-submenu:hover > .dropdown-menu {
     display: block;
   }
+
+  .nav-item .nav-link{
+    color: #000000;
+  }
   
+.dropdown{
+  padding-bottom: 3%;
+}
+
+/**Footer style**/
+.icon_git{
+  color:gray
+}
+.icon_git:hover {
+  color: black;
+  zoom: 120%;
+}
+.icon_linkedin{
+  color:grey
+}
+.icon_linkedin:hover {
+  color: rgb(9, 87, 231);
+  zoom: 120%;
+}
+.btn {
+  color: #000000 !important;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 0.4em 1.1em;
+  background: rgba(0, 0, 0, 0);
+  border: 2px solid;
+  border-color: #000000;
+  transition: all 1s ease;
+  text-decoration: none;
+}
+.btn:hover {
+  background: #000000;
+  color: #ffffff !important;
+}
