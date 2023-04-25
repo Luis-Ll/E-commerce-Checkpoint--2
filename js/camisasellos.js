@@ -5,56 +5,56 @@ const productEcomerce = [
         price: 109.95,
         description:
             "Tu mejor estilo",
-        image: "/assets/vestido1.jfif",
+        image: "/assets/camisaHawaiana.jfif",
     },
     {
         id: 2,
         price: 120.95,
         description:
             "Tu mejor estilo",
-        image: "/assets/vestido2.jfif",
+        image: "/assets/camisasvestir.jpg",
     },
     {
         id: 2,
         price: 120.95,
         description:
             "Tu mejor estilo",
-        image: "/assets/vestido3.jfif",
+        image: "/assets/camisasvestir2.jpg",
     },
     {
         id: 2,
         price: 120.95,
         description:
             "Tu mejor estilo",
-        image: "/assets/vestido4.jfif",
+        image: "/assets/camisasvestir3.jpg",
     },
     {
         id: 2,
         price: 120.95,
         description:
             "Tu mejor estilo",
-        image: "/assets/fiesta1.jfif",
+        image: "/assets/camisasvestir4.jpg",
     },
     {
         id: 2,
         price: 120.95,
         description:
             "Tu mejor estilo",
-        image: "/assets/fiesta2.jfif",
+        image: "/assets/camisahombre.webp",
     },
     {
         id: 2,
         price: 120.95,
         description:
             "Tu mejor estilo",
-        image: "/assets/fiesta3.jfif",
+        image: "/assets/camisasvestir.jpg",
     },
     {
         id: 2,
         price: 120.95,
         description:
             "Tu mejor estilo",
-        image: "/assets/fiesta4.jfif",
+        image: "/assets/camisasvestir.jpg",
     }
 ]
 
@@ -91,7 +91,7 @@ const productEcomerce = [
                 </div>
                 <!-- Product actions-->
                 <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                    <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Agregar al carrito</a></div>
+                    <div class="text-center "><a class="btn btn-outline-dark mt-auto button_cart" href="#">Agregar al carrito</a></div>
                 </div>
             </div>
         </div>

@@ -5,56 +5,56 @@ const productEcomerce = [
         price: 109.95,
         description:
             "Tu mejor estilo",
-        image: "/assets/zapatillas1.jfif",
-    },  
-    {
-        id: 2,
-        price: 120.95,
-        description:
-            "Tu mejor estilo",
-        image: "/assets/zapatillas2.jfif",
+        image: "/assets/remera1.jfif",
     },
     {
         id: 2,
         price: 120.95,
         description:
             "Tu mejor estilo",
-        image: "/assets/zapatillas3.jfif",
+        image: "/assets/remera2.jfif",
     },
     {
         id: 2,
         price: 120.95,
         description:
             "Tu mejor estilo",
-        image: "/assets/zapatillas4.jfif",
+        image: "/assets/remera3.jfif",
     },
     {
         id: 2,
         price: 120.95,
         description:
             "Tu mejor estilo",
-        image: "/assets/zapatillas5.jfif",
+        image: "/assets/remera4.jfif",
     },
     {
         id: 2,
         price: 120.95,
         description:
             "Tu mejor estilo",
-        image: "/assets/zapatillas6.jfif",
+        image: "/assets/remera5.jfif",
     },
     {
         id: 2,
         price: 120.95,
         description:
             "Tu mejor estilo",
-        image: "/assets/zapatillas7.jfif",
+        image: "/assets/remera6.jfif",
     },
     {
         id: 2,
         price: 120.95,
         description:
             "Tu mejor estilo",
-        image: "/assets/zapatillas8.jfif",
+        image: "/assets/remera7.jfif",
+    },
+    {
+        id: 2,
+        price: 120.95,
+        description:
+            "Tu mejor estilo",
+        image: "/assets/remera8.jfif",
     }
 ]
 
@@ -91,7 +91,7 @@ const productEcomerce = [
                 </div>
                 <!-- Product actions-->
                 <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                    <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Agregar al carrito</a></div>
+                    <div class="text-center"><a class="btn btn-outline-dark mt-auto button_cart" href="#">Agregar al carrito</a></div>
                 </div>
             </div>
         </div>

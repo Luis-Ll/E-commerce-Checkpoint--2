@@ -5,56 +5,56 @@ const productEcomerce = [
         price: 109.95,
         description:
             "Tu mejor estilo",
-        image: "/assets/jean1.jfif",
+        image: "/assets/zapatosfiesta1.jfif",
     },
     {
         id: 2,
         price: 120.95,
         description:
             "Tu mejor estilo",
-        image: "/assets/jean2.jfif",
+        image: "/assets/zapatosfiesta2.jfif",
     },
     {
         id: 2,
         price: 120.95,
         description:
             "Tu mejor estilo",
-        image: "/assets/jean3.jfif",
+        image: "/assets/zapatosfiesta3.jfif",
     },
     {
         id: 2,
         price: 120.95,
         description:
             "Tu mejor estilo",
-        image: "/assets/jean4.jfif",
+        image: "/assets/zapatosfiesta4.jfif",
     },
     {
         id: 2,
         price: 120.95,
         description:
             "Tu mejor estilo",
-        image: "/assets/jean5.jfif",
+        image: "/assets/empresa1.jfif",
     },
     {
         id: 2,
         price: 120.95,
         description:
             "Tu mejor estilo",
-        image: "/assets/jean6.jfif",
+        image: "/assets/empresa2.jfif",
     },
     {
         id: 2,
         price: 120.95,
         description:
             "Tu mejor estilo",
-        image: "/assets/jean7.jfif",
+        image: "/assets/empresa3.jfif",
     },
     {
         id: 2,
         price: 120.95,
         description:
             "Tu mejor estilo",
-        image: "/assets/jean8.jfif",
+        image: "/assets/empresa4.jfif",
     }
 ]
 
@@ -91,7 +91,7 @@ const productEcomerce = [
                 </div>
                 <!-- Product actions-->
                 <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                    <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Agregar al carrito</a></div>
+                    <div class="text-center"><a class="btn btn-outline-dark mt-auto button_cart" href="#">Agregar al carrito</a></div>
                 </div>
             </div>
         </div>
