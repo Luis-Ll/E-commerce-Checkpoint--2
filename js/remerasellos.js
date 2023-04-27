@@ -103,3 +103,4 @@ const productEcomerce = [
     }
     
     renderProducts(products);
+
