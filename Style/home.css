@@ -55,3 +55,15 @@
   background: #000000;
   color: #ffffff !important;
 }
+
+/**Page Pay**/
+
+.cardPay{
+  height: 100%;
+  background-color: rgba(112, 114, 114, 0.459);
+}
+.imgPay{
+  height: 100px;
+  width: 80px;
+  object-fit: cover;
+}
