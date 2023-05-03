@@ -1,6 +1,7 @@
-const productsPay = document.getElementById("productPay")
-const price = document.getElementById("price")
+const productsPay = document.getElementById("productPay");
+const price = document.getElementById("price");
 const cartView = document.getElementById("cart");
+const cartquantity = document.getElementById("Cartquantity")
 
 let product = JSON.parse(localStorage.getItem('carrito'))
 
@@ -26,27 +27,37 @@ const renderProducts = (producPay) => {
     producPay.forEach(prod => {
         const productElement = document.createElement("div"); 
         productElement.innerHTML = `   
-        <div class="card w-75 cardPay mt-2">
-             <div class="card-body d-flex justify-content-around">
-              <div class="">
-                     <img src="${prod.image}"class="img-thumbnail imgPay" alt=""/>
+           <div class="card mt-2 mb-lg-0 shadow-lg cardPay">
+        <div class="card-body">
+          <div class="d-flex justify-content-between">
+            <div class="d-flex flex-row align-items-center">
+              <div>
+                <img
+                  src="${prod.image}"
+                  class="img-fluid rounded-3" alt="Shopping item" style="width: 65px;">
               </div>
-             <div>
-          <h5 class="card-title d-flex flex-row-reverse bd-highlight">${prod.title}</h5>
-           <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-           <span>Cantidad: ${prod.cantidad}</span>
-           <div class="d-flex justify-content-end">
-           <span class="pe-2 text-primary"> ${prod.price}</span>
-           <a href="#" class=""  onclick="quitarProducto(${prod.id})"><i class="fa-solid fa-delete-left"></i></a> 
-           </div>
-         
-          </div>
-
+              <div class="ms-3">
+                <h5>${prod.title}</h5>
+                <p class="small mb-0">${prod.description}</p>
+              </div>
             </div>
+            <div class="d-flex flex-row align-items-center">
+              <div style="width: 50px;">
+                <h5 class="fw-normal mb-0">${prod.cantidad}</h5>
+              </div>
+              <div style="width: 80px;">
+                <h5 class="mb-0">${prod.price}</h5>
+              </div>
+              <a href="#!" style="color: #cecece;" onclick="quitarProducto(${prod.id})"><i class="fas fa-trash-alt text-secondary"></i></a>
+            </div>
+          </div>
         </div>
+      </div>
+
+
 
         `;
-
+        cartquantity.innerText = producPay.length
         price.innerText = product.reduce((acc, prod) => acc + prod.cantidad * prod.price, 0)
         productsPay.appendChild(productElement);
     })
@@ -84,7 +95,9 @@ function deleteStorage() {
 if (product.length === 0) {
     console.log("no tienes nada")
     productsPay.innerHTML = `
-    <p class="text-primary fw-bold text-center">¡Aún no agregaste nada al carrito!</p>`;
+    <div class="bg-danger-subtle d-flex align-items-center justify-content-center rounded">
+    <p class="text-danger fw-bold text-center fs-2 ">¡Aún no agregaste nada al carrito!</p>
+  </div>`;
     
       
 }
@@ -93,7 +106,9 @@ if (product.length === 0) {
 if (product.length === 0) {
     console.log("no tienes nada")
     productsPay.innerHTML = `
-    <p class="text-primary fw-bold text-center">¡Aún no agregaste nada al carrito!</p>`;
+    <div class="bg-danger-subtle d-flex align-items-center justify-content-center rounded">
+    <p class="text-danger fw-bold text-center fs-2 ">¡Aún no agregaste nada al carrito!</p>
+  </div>`;
     
       
 }
