@@ -22,7 +22,7 @@ const producPay = product.map(prod =>{
 
 console.log(producPay)
 
-const renderProducts = (producPay) => {
+const render = (producPay) => {
     productsPay.innerHTML = "";
     producPay.forEach(prod => {
         const productElement = document.createElement("div"); 
@@ -63,7 +63,7 @@ const renderProducts = (producPay) => {
     })
 }
 
-renderProducts(producPay);
+render(producPay);
 
 function quitarProducto(id){
 
@@ -85,7 +85,7 @@ function quitarProducto(id){
         }
     })
 
-    renderProducts(producPay);
+    render(producPay);
     deleteStorage()
 };
 
