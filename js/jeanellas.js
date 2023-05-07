@@ -1,7 +1,7 @@
 
 const productEcomerce = [
     {
-        id: 1,
+        id: 9,
         title: "Jeans",
         cantidad: 1,
         price: 109.95,
@@ -10,7 +10,7 @@ const productEcomerce = [
         image: "/assets/jean1.jfif",
     },
     {
-        id: 2,
+        id: 10,
         title: "Jeans",
         cantidad: 1,
         price: 120.95,
@@ -19,7 +19,7 @@ const productEcomerce = [
         image: "/assets/jean2.jfif",
     },
     {
-        id: 3,
+        id: 11,
         title: "Jeans",
         cantidad: 1,
         price: 120.95,
@@ -28,7 +28,7 @@ const productEcomerce = [
         image: "/assets/jean3.jfif",
     },
     {
-        id: 4,
+        id: 12,
         title: "Jeans",
         cantidad: 1,
         price: 120.95,
@@ -37,7 +37,7 @@ const productEcomerce = [
         image: "/assets/jean4.jfif",
     },
     {
-        id: 5,
+        id: 13,
         title: "Jeans",
         cantidad: 1,
         price: 120.95,
@@ -46,7 +46,7 @@ const productEcomerce = [
         image: "/assets/jean5.jfif",
     },
     {
-        id: 6,
+        id: 14,
         title: "Jeans",
         cantidad: 1,
         price: 120.95,
@@ -55,7 +55,7 @@ const productEcomerce = [
         image: "/assets/jean6.jfif",
     },
     {
-        id: 7,
+        id: 15,
         title: "Jeans",
         cantidad: 1,
         price: 120.95,
@@ -64,7 +64,7 @@ const productEcomerce = [
         image: "/assets/jean7.jfif",
     },
     {
-        id: 8,
+        id: 16,
         title: "Jeans",
         cantidad: 1,
         price: 120.95,
@@ -75,9 +75,8 @@ const productEcomerce = [
 ]
 
 
-let carrito = [
+let carrito =  JSON.parse(localStorage.getItem('carrito'))
 
-]
 
     const rootProducts = document.getElementById("root-products");
 

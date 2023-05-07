@@ -1,0 +1,1 @@
+const productDetail = document.getElementById("productDetail")
