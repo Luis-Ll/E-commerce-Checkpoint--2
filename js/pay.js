@@ -72,6 +72,16 @@ const renderProducts = (producPay) => {
 
 renderProducts(producPay);
 
+
+/**Vaciarcarrito */
+function vaciarCarrito(){
+  const vaciar = document.getElementById("vaciar")
+  product = [];
+    localStorage.setItem("carrito", JSON.stringify(product));
+    location.reload(true);
+
+}
+
 function quitarProducto(id) {
   const deleteProd = id;
   console.log(deleteProd);
