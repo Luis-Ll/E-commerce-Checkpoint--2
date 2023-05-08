@@ -96,7 +96,7 @@ if (product.length === 0) {
     console.log("no tienes nada")
     productsPay.innerHTML = `
     <div class="bg-danger-subtle d-flex align-items-center justify-content-center rounded">
-    <p class="text-danger fw-bold text-center fs-2 ">¡Aún no agregaste nada al carrito!</p>
+    <p class="text-danger fw-bold text-center fs-2 p-5">¡Aún no agregaste nada al carrito!</p>
   </div>`;
     
       
@@ -107,7 +107,7 @@ if (product.length === 0) {
     console.log("no tienes nada")
     productsPay.innerHTML = `
     <div class="bg-danger-subtle d-flex align-items-center justify-content-center rounded">
-    <p class="text-danger fw-bold text-center fs-2 ">¡Aún no agregaste nada al carrito!</p>
+    <p class="text-danger fw-bold text-center fs-2 p-5 ">¡Aún no agregaste nada al carrito!</p>
   </div>`;
     
       
