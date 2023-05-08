@@ -1,5 +1,5 @@
 const productDetail = document.getElementById("detalle")
-console.log("holsa", productDetail)
+
 
 
 
