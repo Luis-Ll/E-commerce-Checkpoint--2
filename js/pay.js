@@ -21,12 +21,20 @@ const producPay = product.map((prod) => {
 
 
 
+
 const renderProducts = (producPay) => {
   productsPay.innerHTML = "";
   producPay.forEach((prod) => {
     const productElement = document.createElement("div");
     productElement.innerHTML = `   
            <div class="card mt-2 mb-2 mb-lg-0 shadow-lg cardPay">
+
+const render = (producPay) => {
+    productsPay.innerHTML = "";
+    producPay.forEach(prod => {
+        const productElement = document.createElement("div"); 
+        productElement.innerHTML = `   
+           <div class="card mt-2 mb-lg-0 shadow-lg cardPay">
         <div class="card-body">
           <div class="d-flex justify-content-between">
             <div class="d-flex flex-row align-items-center">
@@ -70,7 +78,7 @@ const renderProducts = (producPay) => {
   });
 };
 
-renderProducts(producPay);
+render(producPay);
 
 
 /**Vaciarcarrito */
@@ -88,6 +96,7 @@ function quitarProducto(id) {
 
   product = product.filter((prenda) => prenda.id !== id);
 
+
   console.log(product);
 
   const producPay = product.map((prod) => {
@@ -104,6 +113,11 @@ function quitarProducto(id) {
   renderProducts(producPay);
   deleteStorage();
 }
+
+    render(producPay);
+    deleteStorage()
+};
+
 
 function deleteStorage() {
   localStorage.setItem("carrito", JSON.stringify(product));
