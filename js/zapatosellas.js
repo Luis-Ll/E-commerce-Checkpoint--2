@@ -1,7 +1,7 @@
 
 const productEcomerce = [
     {
-        id: 1,
+        id: 41,
         title: "Zapatos moda 2023",
         cantidad: 1,
         price: 109.95,
@@ -10,7 +10,7 @@ const productEcomerce = [
         image: "/assets/zapatosfiesta1.jfif",
     },
     {
-        id: 2,
+        id: 42,
         title: "Zapatos moda 2023",
         cantidad: 1,
         price: 120.95,
@@ -19,7 +19,7 @@ const productEcomerce = [
         image: "/assets/zapatosfiesta2.jfif",
     },
     {
-        id: 3,
+        id: 43,
         title: "Zapatos moda 2023",
         cantidad: 1,
         price: 120.95,
@@ -28,7 +28,7 @@ const productEcomerce = [
         image: "/assets/zapatosfiesta3.jfif",
     },
     {
-        id: 4,
+        id: 44,
         title: "Zapatos moda 2023",
         cantidad: 1,
         price: 120.95,
@@ -37,7 +37,7 @@ const productEcomerce = [
         image: "/assets/zapatosfiesta4.jfif",
     },
     {
-        id: 5,
+        id: 45,
         title: "Zapatos moda 2023",
         cantidad: 1,
         price: 120.95,
@@ -46,7 +46,7 @@ const productEcomerce = [
         image: "/assets/empresa1.jfif",
     },
     {
-        id: 6,
+        id: 46,
         title: "Zapatos moda 2023",
         cantidad: 1,
         price: 120.95,
@@ -55,7 +55,7 @@ const productEcomerce = [
         image: "/assets/empresa2.jfif",
     },
     {
-        id: 7,
+        id: 47,
         title: "Zapatos moda 2023",
         cantidad: 1,
         price: 120.95,
@@ -64,7 +64,7 @@ const productEcomerce = [
         image: "/assets/empresa3.jfif",
     },
     {
-        id: 8,
+        id: 48,
         title: "Zapatos moda 2023",
         cantidad: 1,
         price: 120.95,
@@ -74,9 +74,7 @@ const productEcomerce = [
     }
 ]
 
-let carrito = [
-
-]
+let carrito =  JSON.parse(localStorage.getItem('carrito'))
 
     const rootProducts = document.getElementById("root-products");
 

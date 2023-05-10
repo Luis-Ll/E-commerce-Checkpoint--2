@@ -3,7 +3,7 @@ const productEcomerce = [
     {
         id: 1,
         cantidad: 1,
-        title: "Camisa hawaiana",
+        title: "Camisa Floreada B/N",
         price: 109.25,
         description:
             "Tu mejor estilo",
@@ -12,7 +12,7 @@ const productEcomerce = [
     {
         id: 2,
         cantidad: 1,
-        title: "Camisa hawaiana",
+        title: "Camisa a Cuadros",
         price: 120.63,
         description:
             "Tu mejor estilo",
@@ -74,9 +74,7 @@ const productEcomerce = [
     }
 ]
 
-let carrito = [
-
-]
+let carrito =  JSON.parse(localStorage.getItem('carrito'))
 
     const rootProducts = document.getElementById("root-products");
 
@@ -147,7 +145,8 @@ function agregarProducto (id){
                 guardarStorage()
         }else{
             const item = products.find((prenda) => prenda.id === id)
-            carrito.push(item)
+            carrito = [...carrito,item]
+            console.log(carrito)
         
             guardarStorage()
 
@@ -156,6 +155,7 @@ function agregarProducto (id){
         
      
 }
+
 
 function guardarStorage() {
     localStorage.setItem("carrito",JSON.stringify(carrito))

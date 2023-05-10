@@ -134,11 +134,11 @@
                           class="fas fa-long-arrow-alt-left me-2"></i>Volver a la Tienda</a></h5>
                     <hr>
     
-                    <div class="d-flex justify-content-between align-items-center mb-4">
-                      <div>
-                        <p class="mb-1">Carrito</p>
-                        <p class="mb-0">Tienes <span id="Cartquantity"></span> articulos en tu carrito.</p>
+                    <div class="d-flex justify-content-between align-items-center mb-4 bg-primary bg-opacity-50 rounded p-2">
+                      <div class="">
+                        <p class="mb-0 "  id="Cartquantity"></p> 
                       </div>
+                      <button id="vaciar" ondblclick="vaciarCarrito()" class="border-0  p-2 text-dark  rounded bg-danger "><i class="fa-solid fa-trash fa-xl"></i></button>
                   
                     </div>
     
@@ -170,13 +170,13 @@
                         <form class="mt-4">
                           <div class="form-outline form-white mb-4">
                             <input type="text" id="typeName" class="form-control form-control-lg" siez="17"
-                              placeholder="Nombre del titular de la tarjeta" />
+                              placeholder="Nombre del titular de la tarjeta" required/>
                             <label class="form-label" for="typeName">Nombre del titular de la tarjeta</label>
                           </div>
     
                           <div class="form-outline form-white mb-4">
                             <input type="text" id="typeText" class="form-control form-control-lg" siez="17"
-                              placeholder="1234 5678 9012 3457" minlength="19" maxlength="19" />
+                              placeholder="1234 5678 9012 3457" minlength="19" maxlength="19" required />
                             <label class="form-label" for="typeText">Número de tarjeta</label>
                           </div>
     
@@ -184,14 +184,14 @@
                             <div class="col-md-6">
                               <div class="form-outline form-white">
                                 <input type="text" id="typeExp" class="form-control form-control-lg"
-                                  placeholder="MM/YYYY" size="7" id="exp" minlength="7" maxlength="7" />
+                                  placeholder="MM/YYYY" size="7" id="exp" minlength="7" maxlength="7" required/>
                                 <label class="form-label" for="typeExp">Vencimiento</label>
                               </div>
                             </div>
                             <div class="col-md-6">
                               <div class="form-outline form-white">
-                                <input type="password" id="typeText" class="form-control form-control-lg"
-                                  placeholder="&#9679;&#9679;&#9679;" size="1" minlength="3" maxlength="3" />
+                                <input type="password" id="typePass" class="form-control form-control-lg"
+                                  placeholder="&#9679;&#9679;&#9679;" size="1" minlength="3" maxlength="3" required />
                                 <label class="form-label" for="typeText">Cvv</label>
                               </div>
                             </div>
@@ -208,7 +208,7 @@
                           <p class="mb-2">$<span id="price"></span></p>
                         </div>
     
-                        <button type="button" class="btn btn-info btn-block btn-lg">
+                        <button type="button" class="btn btn-info btn-block btn-lg bg-success " onclick="validationPay()">
                           <div class="d-flex justify-content-between">
                             
                             <span>Comprar <i class="fas fa-long-arrow-alt-right ms-2"></i></span>
@@ -362,5 +362,6 @@
     <script src="home.js"></script>
     <script src="./js/developers.js"></script>
     <script src="/js/pay.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>
 </html>
