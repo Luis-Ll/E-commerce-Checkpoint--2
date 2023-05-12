@@ -1,9 +1,10 @@
 const productsPay = document.getElementById("productPay");
 const price = document.getElementById("price");
 const cartView = document.getElementById("cart");
-const cartquantity = document.getElementById("Cartquantity")
+const cartquantity = document.getElementById("Cartquantity");
 
-let product = JSON.parse(localStorage.getItem('carrito'))
+let product = JSON.parse(localStorage.getItem("carrito"));
+cartquantity.innerText = `Tienes ${product.length} articulos en tu carrito.`;
 
 
 console.log(product)
@@ -20,14 +21,20 @@ const producPay = product.map(prod =>{
     }
 })
 
-console.log(producPay)
+const renderProducts = (producPay) => {
+  productsPay.innerHTML = "";
+  producPay.forEach((prod) => {
+    const productElement = document.createElement("div");
+    productElement.innerHTML = `   
+           <div class="card mt-2 mb-2 mb-lg-0 shadow-lg cardPay">
 
-const render = (producPay) => {
+
+const renderProducts = (producPay) => {
     productsPay.innerHTML = "";
-    producPay.forEach(prod => {
+  producPay.forEach((prod) => {
         const productElement = document.createElement("div"); 
         productElement.innerHTML = `   
-           <div class="card mt-2 mb-lg-0 shadow-lg cardPay">
+           <div class="card mt-2 mb-2 mb-lg-0 shadow-lg cardPay">
         <div class="card-body">
           <div class="d-flex justify-content-between">
             <div class="d-flex flex-row align-items-center">
@@ -63,7 +70,9 @@ const render = (producPay) => {
     })
 }
 
-render(producPay);
+function quitarProducto(id) {
+  const deleteProd = id;
+  console.log(deleteProd);
 
 function quitarProducto(id){
 
@@ -88,6 +97,12 @@ function quitarProducto(id){
     render(producPay);
     deleteStorage()
 };
+  });
+
+  renderProducts(producPay);
+  deleteStorage();
+}
+
 
 function deleteStorage() {
     localStorage.setItem("carrito",JSON.stringify(product))
@@ -96,18 +111,16 @@ if (product.length === 0) {
     console.log("no tienes nada")
     productsPay.innerHTML = `
     <div class="bg-danger-subtle d-flex align-items-center justify-content-center rounded">
-    <p class="text-danger fw-bold text-center fs-2 ">¡Aún no agregaste nada al carrito!</p>
+    <p class="text-danger fw-bold text-center fs-2 p-5">¡Aún no agregaste nada al carrito!</p>
   </div>`;
-    
-      
-}
+  }
 }
 
 if (product.length === 0) {
     console.log("no tienes nada")
     productsPay.innerHTML = `
     <div class="bg-danger-subtle d-flex align-items-center justify-content-center rounded">
-    <p class="text-danger fw-bold text-center fs-2 ">¡Aún no agregaste nada al carrito!</p>
+    <p class="text-danger fw-bold text-center fs-2 p-5 ">¡Aún no agregaste nada al carrito!</p>
   </div>`;
     
       

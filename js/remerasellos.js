@@ -1,7 +1,7 @@
 
 const productEcomerce = [
     {
-        id: 1,
+        id: 17,
         title: "Remera moda 2023",
         cantidad: 1,
         price: 109.95,
@@ -11,7 +11,7 @@ const productEcomerce = [
         image: "/assets/remera1.jfif",
     },
     {
-        id: 2,
+        id: 18,
         title: "Remera moda 2023",
         cantidad: 1,
         price: 120.95,
@@ -21,7 +21,7 @@ const productEcomerce = [
         image: "/assets/remera2.jfif",
     },
     {
-        id: 3,
+        id: 19,
         title: "Remera moda 2023",
         cantidad: 1,
         price: 120.95,
@@ -31,7 +31,7 @@ const productEcomerce = [
         image: "/assets/remera3.jfif",
     },
     {
-        id: 4,
+        id: 20,
         title: "Remera moda 2023",
         cantidad: 1,
         price: 120.95,
@@ -41,7 +41,7 @@ const productEcomerce = [
         image: "/assets/remera4.jfif",
     },
     {
-        id: 5,
+        id: 21,
         title: "Remera moda 2023",
         cantidad: 1,
         price: 120.95,
@@ -51,7 +51,7 @@ const productEcomerce = [
         image: "/assets/remera5.jfif",
     },
     {
-        id: 6,
+        id: 22,
         title: "Remera moda 2023",
         cantidad: 1,
         price: 120.95,
@@ -61,7 +61,7 @@ const productEcomerce = [
         image: "/assets/remera6.jfif",
     },
     {
-        id: 7,
+        id: 23,
         title: "Remera moda 2023",
         cantidad: 1,
         price: 120.95,
@@ -71,7 +71,7 @@ const productEcomerce = [
         image: "/assets/remera7.jfif",
     },
     {
-        id: 8,
+        id: 24,
         title: "Remera moda 2023",
         cantidad: 1,
         price: 120.95,
@@ -82,9 +82,7 @@ const productEcomerce = [
     }
 ]
 
-let carrito = [
-
-]
+let carrito =  JSON.parse(localStorage.getItem('carrito'))
 
     const rootProducts = document.getElementById("root-products");
 
