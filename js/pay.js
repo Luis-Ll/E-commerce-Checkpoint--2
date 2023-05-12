@@ -7,33 +7,26 @@ let product = JSON.parse(localStorage.getItem("carrito"));
 cartquantity.innerText = `Tienes ${product.length} articulos en tu carrito.`;
 
 
-console.log(product)
+const producPay = product.map((prod) => {
+  return {
+    id: prod.id,
+    cantidad: prod.cantidad,
+    title: prod.title,
+    price: prod.price,
+    description: prod.description,
+    category: prod.category,
+    image: prod.image,
+  };
+});
 
-const producPay = product.map(prod =>{
-    return {
-        id: prod.id,
-        cantidad: prod.cantidad,
-        title: prod.title,
-        price: prod.price,
-        description: prod.description,
-        category: prod.category,
-        image: prod.image 
-    }
-})
+
+
 
 const renderProducts = (producPay) => {
   productsPay.innerHTML = "";
   producPay.forEach((prod) => {
     const productElement = document.createElement("div");
     productElement.innerHTML = `   
-           <div class="card mt-2 mb-2 mb-lg-0 shadow-lg cardPay">
-
-
-const renderProducts = (producPay) => {
-    productsPay.innerHTML = "";
-  producPay.forEach((prod) => {
-        const productElement = document.createElement("div"); 
-        productElement.innerHTML = `   
            <div class="card mt-2 mb-2 mb-lg-0 shadow-lg cardPay">
         <div class="card-body">
           <div class="d-flex justify-content-between">
@@ -64,51 +57,60 @@ const renderProducts = (producPay) => {
 
 
         `;
-        cartquantity.innerText = producPay.length
-        price.innerText = product.reduce((acc, prod) => acc + prod.cantidad * prod.price, 0)
-        productsPay.appendChild(productElement);
-    })
+    if (producPay.length === 1) {
+      cartquantity.innerText = `Tienes 1 articulo en tu carrito.`;
+    } else {
+      cartquantity.innerText = `Tienes ${product.length} articulos en tu carrito.`;
+    }
+    let precio = product.reduce(
+      (acc, prod) => acc + prod.cantidad * prod.price,
+      0
+    );
+    price.innerText =  precio.toFixed(2)
+    productsPay.appendChild(productElement);
+  });
+};
+
+renderProducts(producPay);
+
+
+/**Vaciarcarrito */
+function vaciarCarrito(){
+  const vaciar = document.getElementById("vaciar")
+  product = [];
+    localStorage.setItem("carrito", JSON.stringify(product));
+    location.reload(true);
+
 }
 
 function quitarProducto(id) {
   const deleteProd = id;
   console.log(deleteProd);
 
-function quitarProducto(id){
+  product = product.filter((prenda) => prenda.id !== id);
 
-    const deleteProd = id
-    console.log(deleteProd)
+  console.log(product);
 
-    product = product.filter((prenda) => prenda.id !== id )
-
-    console.log(product)
-
-    const producPay = product.map(prod =>{
-        return {
-            id: prod.id,
-            title: prod.title,
-            price: prod.price,
-            description: prod.description,
-            category: prod.category,
-            image: prod.image 
-        }
-    })
-
-    render(producPay);
-    deleteStorage()
-};
+  const producPay = product.map((prod) => {
+    return {
+      id: prod.id,
+      title: prod.title,
+      price: prod.price,
+      description: prod.description,
+      category: prod.category,
+      image: prod.image,
+    };
   });
 
   renderProducts(producPay);
   deleteStorage();
 }
 
-
 function deleteStorage() {
-    localStorage.setItem("carrito",JSON.stringify(product))
-    
-if (product.length === 0) {
-    console.log("no tienes nada")
+  localStorage.setItem("carrito", JSON.stringify(product));
+
+  if (product.length === 0) {
+    cartquantity.innerText = `Tienes ${product.length} articulos en tu carrito.`;
     productsPay.innerHTML = `
     <div class="bg-danger-subtle d-flex align-items-center justify-content-center rounded">
     <p class="text-danger fw-bold text-center fs-2 p-5">¡Aún no agregaste nada al carrito!</p>
@@ -117,11 +119,67 @@ if (product.length === 0) {
 }
 
 if (product.length === 0) {
-    console.log("no tienes nada")
-    productsPay.innerHTML = `
+  console.log("no tienes nada");
+  productsPay.innerHTML = `
     <div class="bg-danger-subtle d-flex align-items-center justify-content-center rounded">
     <p class="text-danger fw-bold text-center fs-2 p-5 ">¡Aún no agregaste nada al carrito!</p>
   </div>`;
-    
-      
+}
+
+//**Validación del form */
+
+function validationPay() {
+  const name = document.getElementById("typeName").value;
+  const numTarget = document.getElementById("typeText").value;
+  const venc = document.getElementById("typeExp").value;
+  const pass = document.getElementById("typePass").value;
+
+  if (name === "") {
+    swal({
+      title: "Completa todos los campos",
+      text: "Nombre del Titular.",
+      icon: "error",
+      button: "Aceptar",
+    });
+  } else if (numTarget === "") {
+    swal({
+      title: "Completa todos los campos",
+      text: "Numero de tarjeta.",
+      icon: "error",
+      button: "Aceptar",
+    });
+  } else if (venc === "") {
+    swal({
+      title: "Completa todos los campos",
+      text: "Fecha de Vencimiento de la tarjeta.",
+      icon: "error",
+      button: "Aceptar",
+    });
+  } else if (pass === "") {
+    swal({
+      title: "Completa todos los campos",
+      text: "Codigo de la tarjeta.",
+      icon: "error",
+      button: "Aceptar",
+    });
+  } else if(product.length === 0){
+    swal({
+      title: "Aun no agregaste nada a tu carrito",
+      text: "Ingresa a la tienda y selecciona tu producto.",
+      icon: "error",
+      button: "Aceptar", 
+    });
+
+  }
+  else {
+    swal({
+      title: "Compra realizada correctamente",
+      text: "¡Gracias por tu compra!",
+      icon: "success",
+      button: "Aceptar",
+    });
+    product = [];
+    localStorage.setItem("carrito", JSON.stringify(product));
+    location.reload(true);
+  }
 }
