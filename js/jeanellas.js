@@ -6,7 +6,9 @@ const productEcomerce = [
         cantidad: 1,
         price: 109.95,
         description:
-            "Tu mejor estilo",
+            "Moda Invierno",
+            talle:"S-M",
+            color:"Verde - Marron",
         image: "/assets/jean1.jfif",
     },
     {
@@ -15,7 +17,9 @@ const productEcomerce = [
         cantidad: 1,
         price: 120.95,
         description:
-            "Tu mejor estilo",
+            "Moda Invierno",
+            talle:"S-M",
+            color:"Verde - Marron",
         image: "/assets/jean2.jfif",
     },
     {
@@ -24,7 +28,9 @@ const productEcomerce = [
         cantidad: 1,
         price: 120.95,
         description:
-            "Tu mejor estilo",
+            "Moda Invierno",
+            talle:"S-M",
+            color:"Verde - Marron",
         image: "/assets/jean3.jfif",
     },
     {
@@ -33,7 +39,9 @@ const productEcomerce = [
         cantidad: 1,
         price: 120.95,
         description:
-            "Tu mejor estilo",
+            "Moda Invierno",
+            talle:"S-M",
+            color:"Verde - Marron",
         image: "/assets/jean4.jfif",
     },
     {
@@ -42,7 +50,9 @@ const productEcomerce = [
         cantidad: 1,
         price: 120.95,
         description:
-            "Tu mejor estilo",
+            "Moda Invierno",
+            talle:"S-M",
+            color:"Verde - Marron",
         image: "/assets/jean5.jfif",
     },
     {
@@ -51,7 +61,9 @@ const productEcomerce = [
         cantidad: 1,
         price: 120.95,
         description:
-            "Tu mejor estilo",
+            "Moda Invierno",
+            talle:"S-M",
+            color:"Verde - Marron",
         image: "/assets/jean6.jfif",
     },
     {
@@ -60,7 +72,9 @@ const productEcomerce = [
         cantidad: 1,
         price: 120.95,
         description:
-            "Tu mejor estilo",
+            "Moda Invierno",
+            talle:"S-M",
+            color:"Verde - Marron",
         image: "/assets/jean7.jfif",
     },
     {
@@ -69,7 +83,9 @@ const productEcomerce = [
         cantidad: 1,
         price: 120.95,
         description:
-            "Tu mejor estilo",
+            "Moda Invierno",
+        talle:"S-M",
+        color:"Verde - Marron",
         image: "/assets/jean8.jfif",
     }
 ]
@@ -87,6 +103,8 @@ let carrito = [
             cantidad: product.cantidad,
             title: product.title,
             price: product.price,
+            talle:product.talle,
+            color:product.color,
             description: product.description,
             category: product.category,
             image: product.image 
@@ -100,7 +118,7 @@ let carrito = [
             const productElement = document.createElement("div"); 
             productElement.innerHTML = `   
             <div class="col mb-5">
-            <div class="card h-100" >
+            <div class="card h-100 border-danger" >
                 <!-- Product image-->
                 <img class="card-img-top" src="${product.image}" alt="..." />
                 <!-- Product details-->
@@ -109,9 +127,11 @@ let carrito = [
                         <!-- Product name-->
                         <h5 class="fw-bolder">${product.title}</h5>
                         <!-- Product price-->
-                        ${product.price}
+                        <h6 class="fw-bolder">Talles: ${product.talle}</h6>
+                        <h6 class="fw-bolder">Colores: ${product.color}</h6>
+                        <h4 class="fw-bolder black"> $${product.price}</h4>
+                   
                     </div>
-                </div>
                 <!-- Product actions-->
                 <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                     <div class="text-center "><a class="btn btn-outline-dark mt-auto button_cart" onclick="agregarProducto(${product.id})" href="#">Agregar al carrito</a></div>

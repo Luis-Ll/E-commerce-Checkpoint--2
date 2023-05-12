@@ -5,8 +5,8 @@ const productEcomerce = [
         title: "Vestidos moda 2023",
         cantidad: 1,
         price: 109.95,
-        description:
-            "Tu mejor estilo",
+        talle:"S-L",
+        color:"Rojo - Negro",
         image: "/assets/vestido1.jfif",
     },
     {
@@ -14,8 +14,8 @@ const productEcomerce = [
         title: "Vestidos moda 2023",
         cantidad: 1,
         price: 120.95,
-        description:
-            "Tu mejor estilo",
+        talle:"S-L",
+        color:"Rojo - Negro",
         image: "/assets/vestido2.jfif",
     },
     {
@@ -23,8 +23,8 @@ const productEcomerce = [
         title: "Vestidos moda 2023",
         cantidad: 1,
         price: 120.95,
-        description:
-            "Tu mejor estilo",
+        talle:"S-L",
+        color:"Rojo - Negro",
         image: "/assets/vestido3.jfif",
     },
     {
@@ -32,8 +32,8 @@ const productEcomerce = [
         title: "Vestidos moda 2023",
         cantidad: 1,
         price: 120.95,
-        description:
-            "Tu mejor estilo",
+        talle:"S-L",
+        color:"Rojo - Negro",
         image: "/assets/vestido4.jfif",
     },
     {
@@ -41,8 +41,8 @@ const productEcomerce = [
         title: "Vestidos moda 2023",
         cantidad: 1,
         price: 120.95,
-        description:
-            "Tu mejor estilo",
+        talle:"S-L",
+        color:"Rojo - Negro",
         image: "/assets/fiesta1.jfif",
     },
     {
@@ -50,8 +50,8 @@ const productEcomerce = [
         title: "Vestidos moda 2023",
         cantidad: 1,
         price: 120.95,
-        description:
-            "Tu mejor estilo",
+        talle:"S-L",
+        color:"Rojo - Negro",
         image: "/assets/fiesta2.jfif",
     },
     {
@@ -59,8 +59,8 @@ const productEcomerce = [
         title: "Vestidos moda 2023",
         cantidad: 1,
         price: 120.95,
-        description:
-            "Tu mejor estilo",
+        talle:"S-L",
+        color:"Rojo - Negro",
         image: "/assets/fiesta3.jfif",
     },
     {
@@ -68,8 +68,8 @@ const productEcomerce = [
         title: "Vestidos moda 2023",
         cantidad: 1,
         price: 120.95,
-        description:
-            "Tu mejor estilo",
+        talle:"S-L",
+        color:"Rojo - Negro",
         image: "/assets/fiesta4.jfif",
     }
 ]
@@ -86,6 +86,8 @@ let carrito = [
             cantidad: product.cantidad,
             title: product.title,
             price: product.price,
+            talle:product.talle,
+            color:product.color,
             description: product.description,
             category: product.category,
             image: product.image 
@@ -99,7 +101,7 @@ let carrito = [
             const productElement = document.createElement("div"); 
             productElement.innerHTML = `   
             <div class="col mb-5">
-            <div class="card h-100" >
+            <div class="card h-100 border-danger" >
                 <!-- Product image-->
                 <img class="card-img-top" src="${product.image}" alt="..." />
                 <!-- Product details-->
@@ -108,9 +110,11 @@ let carrito = [
                         <!-- Product name-->
                         <h5 class="fw-bolder">${product.title}</h5>
                         <!-- Product price-->
-                        ${product.price}
+                        <h6 class="fw-bolder">Talles: ${product.talle}</h6>
+                        <h6 class="fw-bolder">Colores: ${product.color}</h6>
+                        <h4 class="fw-bolder black"> $${product.price}</h4>
+                   
                     </div>
-                </div>
                 <!-- Product actions-->
                 <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                     <div class="text-center "><a class="btn btn-outline-dark mt-auto button_cart" onclick="agregarProducto(${product.id})" href="#">Agregar al carrito</a></div>

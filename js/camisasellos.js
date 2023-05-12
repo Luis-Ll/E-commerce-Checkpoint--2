@@ -5,8 +5,9 @@ const productEcomerce = [
         cantidad: 1,
         title: "Camisa hawaiana",
         price: 109.25,
-        description:
-            "Tu mejor estilo",
+        description:"Tu mejor estilo",
+        color: "Rojo-Negro",
+        talle: "L - M",
         image: "/assets/camisaHawaiana.jfif",
     },
     {
@@ -16,6 +17,8 @@ const productEcomerce = [
         price: 120.63,
         description:
             "Tu mejor estilo",
+            color: "Rojo-Negro",
+            talle: "L - M",
         image: "/assets/camisasvestir.jpg",
     },
     {
@@ -25,6 +28,8 @@ const productEcomerce = [
         price: 120.95,
         description:
             "Tu mejor estilo",
+            color: "Rojo-Negro",
+            talle: "L - M",
         image: "/assets/camisasvestir2.jpg",
     },
     {
@@ -34,6 +39,8 @@ const productEcomerce = [
         price: 120.95,
         description:
             "Tu mejor estilo",
+            color: "Rojo-Negro",
+            talle: "L - M",
         image: "/assets/camisasvestir3.jpg",
     },
     {
@@ -43,6 +50,8 @@ const productEcomerce = [
         price: 120.95,
         description:
             "Tu mejor estilo",
+            color: "Rojo-Negro",
+            talle: "L - M",
         image: "/assets/camisasvestir4.jpg",
     },
     {
@@ -52,6 +61,8 @@ const productEcomerce = [
         price: 120.95,
         description:
             "Tu mejor estilo",
+            color: "Rojo-Negro",
+            talle: "L - M",
         image: "/assets/camisahombre.webp",
     },
     {
@@ -59,8 +70,9 @@ const productEcomerce = [
         cantidad: 1,
         title: "Camisa hawaiana",
         price: 120.95,
-        description:
-            "Tu mejor estilo",
+        description:"Tu mejor estilo",
+        color: "Rojo-Negro",
+        talle: "L - M",
         image: "/assets/camisasvestir.jpg",
     },
     {
@@ -70,6 +82,8 @@ const productEcomerce = [
         price: 120.95,
         description:
             "Tu mejor estilo",
+            color: "Rojo-Negro",
+            talle: "L - M",
         image: "/assets/camisasvestir.jpg",
     }
 ]
@@ -86,6 +100,8 @@ let carrito = [
             cantidad: product.cantidad,
             title: product.title,
             price: product.price,
+            talle:product.talle,
+            color:product.color,
             description: product.description,
             category: product.category,
             image: product.image 
@@ -99,7 +115,7 @@ let carrito = [
             const productElement = document.createElement("div"); 
             productElement.innerHTML = `   
             <div class="col mb-5">
-            <div class="card h-100" >
+            <div class="card h-100 border-danger" >
                 <!-- Product image-->
                 <img class="card-img-top" src="${product.image}" alt="..." />
                 <!-- Product details-->
@@ -108,7 +124,10 @@ let carrito = [
                         <!-- Product name-->
                         <h5 class="fw-bolder">${product.title}</h5>
                         <!-- Product price-->
-                        ${product.price}
+                        <h6 class="fw-bolder">Talles: ${product.talle}</h6>
+                        <h6 class="fw-bolder">Colores: ${product.color}</h6>
+                        <h4 class="fw-bolder black"> $${product.price}</h4>
+                   
                     </div>
                 </div>
                 <!-- Product actions-->
