@@ -122,4 +122,3 @@ if (product.length === 0) {
     
       
 }
-
