@@ -698,7 +698,11 @@ const productos = [
     productosFiltrados.forEach(producto => {
       const resultado = document.createElement("div");
       console.log("se espera un array", producto)
-      resultado.textContent = producto.title;
+      resultado.innerHTML = `
+      <a href="/productDetail.html" onclick="renderDetails(${producto.id})"><span>${producto.title}</span>
+      
+      </a>`
+      ;
       resultados.appendChild(resultado);
     });
   }
