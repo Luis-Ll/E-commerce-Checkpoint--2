@@ -20,7 +20,7 @@
   <body>
     <!-- Navbar-->
     <head>
-      <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div
           class="container-fluid justify-content-center justify-content-md-between"
         >
@@ -38,18 +38,29 @@
             </a>
 
             <!-- Search form -->
-            <form class="d-flex input-group w-auto my-auto">
-              <input
-                autocomplete="off"
-                type="search"
-                class="form-control rounded"
-                placeholder="Buscar"
-                style="min-width: 125px"
-              />
-              <span class="input-group-text border-0 d-none d-md-flex"
-                ><i class="fas fa-search"></i
-              ></span>
-            </form>
+            <div>
+              <form class="d-flex input-group w-auto my-auto border-end-0">
+                <input
+                id="buscador"
+                  autocomplete="off"
+                  type="search"
+                  class="form-control form-outline rounded"
+                  placeholder="Buscar"
+                  style="min-width: 130px"
+                />
+                
+             <button onclick="buscarProductos()" class="input-group-text border-start-0 d-md-flex">
+             <i class="fas fa-search"></i>
+             </button>
+              </form>
+              <div id="containerProductos">
+                <div id="resultados" class=" bg-white rounded text-center mt-1 boxSearch">
+                  
+                </div>
+              </div>
+            
+            </div>
+        
           </div>
 
           <ul class="navbar-nav flex-row">
@@ -131,142 +142,14 @@
     <!-- Navbar -->
 
     <main>
-     <!-- Product section-->
-     <section class="py-5">
-        <div class="container px-4 px-lg-5 my-5">
-            <div class="row gx-4 gx-lg-5 align-items-center">
-                <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0" src="/assets/cinto.jfif" alt="cinto" /></div>
-                <div class="col-md-6">
-                    <div class="small mb-1">SKU: BST-498</div>
-                    <h1 class="display-5 fw-bolder">Cinto cuero negro</h1>
-                    <div class="fs-5 mb-5">
-                        <span>$61.00</span>
-                    </div>
-                    <p class="lead">Cinturones elegantes para hombre de vestir de cuero.
-                      Material: 100% Cuero vacuno.
-                      3,5 cm de Ancho.
-                      Disponibilidad de colores y diseños.
-                      Hebilla: Color Plateada.
-                      Amplia variedad de talles.
-                      Ideal para usarlo con cualquier estilo y look.</p>
-                    <div class="d-flex">
-                        <input class="form-control text-center me-3" id="inputQuantity" type="num" value="1" style="max-width: 3rem" />
-                        <button id="button_cart" class="btn btn-outline-dark flex-shrink-0" type="button">
-                            <i class="bi-cart-fill me-1"></i>
-                            Agregar al carro
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Related items section-->
-    <section class="py-5 bg-light">
-        <div class="container px-4 px-lg-5 mt-5">
-            <h2 class="fw-bolder mb-4">Productos destacados</h2>
-            <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
-                <div class="col mb-5">
-                    <div class="card h-100">
-                        <!-- Product image-->
-                        <img class="card-img-top" src="/assets/cinto marron.jfif" alt="..." />
-                        <!-- Product details-->
-                        <div class="card-body p-4">
-                            <div class="text-center">
-                                <!-- Product name-->
-                                <h5 class="fw-bolder">Cinto cuero Marròn</h5>
-                                <!-- Product price-->
-                                $80.00
-                            </div>
-                        </div>
-                        <!-- Product actions-->
-                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Agregar al carrito</a></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col mb-5">
-                    <div class="card h-100">
-                        <!-- Sale badge-->
-                        <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
-                        <!-- Product image-->
-                        <img class="card-img-top" src="/assets/relojproducts.webp" alt="..." />
-                        <!-- Product details-->
-                        <div class="card-body p-4">
-                            <div class="text-center">
-                                <!-- Product name-->
-                                <h5 class="fw-bolder">Relo Clasic Men</h5>
-                                <!-- Product reviews-->
-                                <div class="d-flex justify-content-center small text-warning mb-2">
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                </div>
-                                <!-- Product price-->
-                                <span class="text-muted text-decoration-line-through">$250.00</span>
-                                $200.00
-                            </div>
-                        </div>
-                        <!-- Product actions-->
-                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Agregar al carrito</a></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col mb-5">
-                    <div class="card h-100">
-                        <!-- Sale badge-->
-                        <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
-                        <!-- Product image-->
-                        <img class="card-img-top" src="/assets/camisahombre.webp" alt="..." />
-                        <!-- Product details-->
-                        <div class="card-body p-4">
-                            <div class="text-center">
-                                <!-- Product name-->
-                                <h5 class="fw-bolder">Camisa hombre Hawaiana</h5>
-                                <!-- Product price-->
-                                <span class="text-muted text-decoration-line-through">$50.00</span>
-                                $25.00
-                            </div>
-                        </div>
-                        <!-- Product actions-->
-                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Agregar al carrito</a></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col mb-5">
-                    <div class="card h-100">
-                        <!-- Product image-->
-                        <img class="card-img-top" src="/assets/sombrero.webp" alt="..." />
-                        <!-- Product details-->
-                        <div class="card-body p-4">
-                            <div class="text-center">
-                                <!-- Product name-->
-                                <h5 class="fw-bolder">Sombrero Fedora Tipo Lana Elegante </h5>
-                                <!-- Product reviews-->
-                                <div class="d-flex justify-content-center small text-warning mb-2">
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                </div>
-                                <!-- Product price-->
-                                $40.00
-                            </div>
-                        </div>
-                        <!-- Product actions-->
-                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Agregar al carrito</a></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-</main>
+      <div class="container-fluid" id="detalle">
+
+      </div>
+
+      <!-- content -->
+      
+
+
     </main>
     <div class="modal" tabindex="-1" id="miModal">
       <div class="modal-dialog">
@@ -419,6 +302,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="/home.js"></script>
-    <script src="./js/cartcounter.js"></script>
+    <script src="./js/buscador.js"></script>
+    <script src="/js/productDetail.js"></script>
   </body>
 </html>
