@@ -1,7 +1,7 @@
 
 const productEcomerce = [
     {
-        id: 1,
+        id: 25,
         title: "Vestidos moda 2023",
         cantidad: 1,
         price: 109.95,
@@ -10,7 +10,7 @@ const productEcomerce = [
         image: "/assets/vestido1.jfif",
     },
     {
-        id: 2,
+        id: 26,
         title: "Vestidos moda 2023",
         cantidad: 1,
         price: 120.95,
@@ -19,7 +19,7 @@ const productEcomerce = [
         image: "/assets/vestido2.jfif",
     },
     {
-        id: 3,
+        id: 27,
         title: "Vestidos moda 2023",
         cantidad: 1,
         price: 120.95,
@@ -28,7 +28,7 @@ const productEcomerce = [
         image: "/assets/vestido3.jfif",
     },
     {
-        id: 4,
+        id: 28,
         title: "Vestidos moda 2023",
         cantidad: 1,
         price: 120.95,
@@ -37,7 +37,7 @@ const productEcomerce = [
         image: "/assets/vestido4.jfif",
     },
     {
-        id: 5,
+        id: 29,
         title: "Vestidos moda 2023",
         cantidad: 1,
         price: 120.95,
@@ -46,7 +46,7 @@ const productEcomerce = [
         image: "/assets/fiesta1.jfif",
     },
     {
-        id: 6,
+        id: 30,
         title: "Vestidos moda 2023",
         cantidad: 1,
         price: 120.95,
@@ -55,7 +55,7 @@ const productEcomerce = [
         image: "/assets/fiesta2.jfif",
     },
     {
-        id: 7,
+        id: 31,
         title: "Vestidos moda 2023",
         cantidad: 1,
         price: 120.95,
@@ -64,7 +64,7 @@ const productEcomerce = [
         image: "/assets/fiesta3.jfif",
     },
     {
-        id: 8,
+        id: 32,
         title: "Vestidos moda 2023",
         cantidad: 1,
         price: 120.95,
