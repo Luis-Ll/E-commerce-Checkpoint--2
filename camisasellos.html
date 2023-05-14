@@ -29,18 +29,29 @@
           </a>
 
           <!-- Search form -->
-          <form class="d-flex input-group w-auto my-auto">
-            <input
-              autocomplete="off"
-              type="search"
-              class="form-control rounded"
-              placeholder="Buscar"
-              style="min-width: 125px"
-            />
-            <span class="input-group-text border-0 d-none d-md-flex"
-              ><i class="fas fa-search"></i
-            ></span>
-          </form>
+          <div>
+            <form class="d-flex input-group w-auto my-auto border-end-0">
+              <input
+              id="buscador"
+                autocomplete="off"
+                type="search"
+                class="form-control form-outline rounded"
+                placeholder="Buscar"
+                style="min-width: 130px"
+              />
+              
+           <button onclick="buscarProductos()" class="input-group-text border-start-0 d-md-flex">
+           <i class="fas fa-search"></i>
+           </button>
+            </form>
+            <div id="containerProductos">
+              <div id="resultados" class=" bg-white rounded text-center mt-1 boxSearch">
+                
+              </div>
+            </div>
+          
+          </div>
+      
         </div>
 
         <ul class="navbar-nav flex-row">
@@ -102,6 +113,7 @@
              class="badge rounded-pill badge-notification bg-danger"
              >0</span></button>
          </li>
+          
           <!-- Notification dropdown -->
           <!-- Login -->
           <div class="user">
@@ -354,6 +366,6 @@
 
     <script src="./js/camisasellos.js"></script>
     <script src="./js/developers.js"></script>
-    <script src="./js/cartcounter.js"></script>
+    <script src="./js/buscador.js"></script>
 </body>
 </html>
