@@ -128,7 +128,7 @@ let carrito = [
 
 
     //Contador del carrito//
-const buttonCart = document.querySelectorAll(".button_cart");
+
 const cartView = document.getElementById("cart");
 let counter = 0;
 
