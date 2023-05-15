@@ -98,10 +98,7 @@ let carrito =  JSON.parse(localStorage.getItem('carrito'))
 
             productElement.innerHTML = `   <a href="/productDetail.html" onclick="renderDetails(${product.id})">
             <div class="col mb-5" >
-            <div class="card h-100" >
 
-            productElement.innerHTML = `   
-            <div class="col mb-5">
             <div class="card h-100 border-danger" >
 
                 <!-- Product image-->

@@ -2,7 +2,6 @@ const productDetail = document.getElementById("detalle")
 
 
 
-
 const productsAll = [
     {
         id: 1,
@@ -433,7 +432,6 @@ const productsAll = [
         description:
             "Tu mejor estilo",
         image: "/assets/empresa4.jfif",
-
     },
     {
         id: 49,
@@ -490,15 +488,13 @@ const productsAll = [
             "Anteojo de sol",
         image: "https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/img%20(30).webp",
     },
-
-    }
-
+    
 ];
 
 
 
 function renderDetails(id){
-    
+    console.log("id",id)
    
    const product = productsAll.filter((prenda) => prenda.id === id)
 
@@ -510,9 +506,12 @@ localStorage.setItem("Products",JSON.stringify(product))
 
 }
 
-let product = JSON.parse(localStorage.getItem("Products"));
-console.log("esty en el producto", product)
-const productdet = product.map(product => {
+let detalle = JSON.parse(localStorage.getItem("Products"));
+
+console.log("esty en el producto", detalle)
+
+
+const productdet = detalle.map(product => {
     return {
         id: product.id,
         cantidad: product.cantidad,
@@ -616,8 +615,8 @@ function renderProduct (){
 
             </div>
             <a href="#" class="btn btn-warning shadow-0"> Buy now </a>
-            <a href="#" class="btn btn-primary shadow-0"> <i class="me-1 fa fa-shopping-basket"></i> Add to cart </a>
-            <a href="#" class="btn btn-light border border-secondary py-2 icon-hover px-3"> <i class="me-1 fa fa-heart fa-lg"></i> Save </a>
+            <a href="#" class="btn btn-primary shadow-0" onclick="agregarProducto(${product.id})"> <i class="me-1 fa fa-shopping-basket"></i> Agregar al Carrito </a>
+            <a href="#" class="btn btn-light border border-secondary py-2 icon-hover px-3"> <i class="me-1 fa fa-heart fa-lg"></i> Guardar</a>
           </div>
         </main>
       </div>
@@ -742,35 +741,4 @@ function renderProduct (){
 
 renderProduct()
 
-
-
-/*  productDetail.innerHTML = ""
-    product.forEach(product =>{
-        const productElement = document.createElement("div"); 
-            productElement.innerHTML = `   
-            <div class="col mb-5" onclick="renderDetails(${product.id})">
-            <div class="card h-100" >
-                <!-- Product image-->
-                <img class="card-img-top" src="${product.image}" alt="..." />
-                <!-- Product details-->
-                <div class="card-body p-4">
-                    <div class="text-center">
-                        <!-- Product name-->
-                        <h5 class="fw-bolder">${product.title}</h5>
-                        <!-- Product price-->
-                        ${product.price}
-                    </div>
-                </div>
-                <!-- Product actions-->
-                <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                    <div class="text-center "><a class="btn btn-outline-dark mt-auto button_cart" onclick="agregarProducto(${product.id})" href="#">Agregar al carrito</a></div>
-                </div>
-            </div>
-        </div>
-            `;
-            productDetail.appendChild(productElement)
-
-    })
-    
-   console.log(product) */
 
