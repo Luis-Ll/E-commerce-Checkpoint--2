@@ -30,12 +30,17 @@
               href="home.html"
             >
               <img
+
                 src="./assets/WhatsApp_Image_2023-04-10_at_17.55.21-removebg-preview.png"
+
+                src="./assets/2.png"
+
                 height="50px"
                 alt=""
                 loading="lazy"
               />
             </a>
+
 
             <!-- Search form -->
             <form class="d-flex input-group w-auto my-auto">
@@ -51,6 +56,35 @@
               ></span>
             </form>
           </div>
+
+
+  
+            <!-- Search form -->
+            <div class="w-auto my-auto">
+              <form class="d-flex input-group  border-end-0">
+                <input
+                id="buscador"
+                  autocomplete="off"
+                  type="search"
+                  class="form-control form-outline rounded"
+                  placeholder="Buscar"
+                  style="min-width: 130px"
+                />
+                
+             <button onclick="buscarProductos()" class="input-group-text border-start-0 d-md-flex">
+             <i class="fas fa-search"></i>
+             </button>
+              </form>
+              <div id="containerProductos">
+                <div id="resultados" class=" bg-white rounded text-center mt-1 boxSearch">
+                  
+                </div>
+              </div>
+            
+            </div>
+        
+          </div>
+  
 
           <ul class="navbar-nav flex-row">
             <div class="dropdown">
@@ -104,6 +138,9 @@
               </ul>
             </div>
 
+
+
+  
             <!-- Badge -->
             <li class="nav-item me-3">
               <button type="button" class="btn btn-dark btn-btn-primary" data-bs-toggle="modal" data-bs-target="#miModal"><i class="fas fa-shopping-cart"></i><span
@@ -291,8 +328,13 @@
       crossorigin="anonymous"
     ></script>
     <script src="/home.js"></script>
+
     <script src="./js/cartcounter.js"></script>
     <script src="/js/productDetail.js"></script>
   </body>
 </html>
 
+    <script src="./js/buscador.js"></script>
+    <script src="/js/productDetail.js"></script>
+  </body>
+</html>

@@ -433,6 +433,7 @@ const productsAll = [
         description:
             "Tu mejor estilo",
         image: "/assets/empresa4.jfif",
+
     },
     {
         id: 49,
@@ -489,7 +490,9 @@ const productsAll = [
             "Anteojo de sol",
         image: "https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/img%20(30).webp",
     },
-    
+
+    }
+
 ];
 
 
@@ -498,6 +501,7 @@ function renderDetails(id){
     
    
    const product = productsAll.filter((prenda) => prenda.id === id)
+
    console.log(product)
 
 
@@ -739,6 +743,7 @@ function renderProduct (){
 renderProduct()
 
 
+
 /*  productDetail.innerHTML = ""
     product.forEach(product =>{
         const productElement = document.createElement("div"); 
@@ -768,3 +773,4 @@ renderProduct()
     })
     
    console.log(product) */
+

@@ -30,28 +30,39 @@
               href="home.html"
             >
               <img
-                src="./assets/WhatsApp_Image_2023-04-10_at_17.55.21-removebg-preview.png"
+                src="./assets/2.png"
                 height="50px"
                 alt=""
                 loading="lazy"
               />
             </a>
-
+  
             <!-- Search form -->
-            <form class="d-flex input-group w-auto my-auto">
-              <input
-                autocomplete="off"
-                type="search"
-                class="form-control rounded"
-                placeholder="Buscar"
-                style="min-width: 125px"
-              />
-              <span class="input-group-text border-0 d-none d-md-flex"
-                ><i class="fas fa-search"></i
-              ></span>
-            </form>
+            <div class="w-auto my-auto">
+              <form class="d-flex input-group  border-end-0">
+                <input
+                id="buscador"
+                  autocomplete="off"
+                  type="search"
+                  class="form-control form-outline rounded"
+                  placeholder="Buscar"
+                  style="min-width: 130px"
+                />
+                
+             <button onclick="buscarProductos()" class="input-group-text border-start-0 d-md-flex">
+             <i class="fas fa-search"></i>
+             </button>
+              </form>
+              <div id="containerProductos">
+                <div id="resultados" class=" bg-white rounded text-center mt-1 boxSearch">
+                  
+                </div>
+              </div>
+            
+            </div>
+        
           </div>
-
+  
           <ul class="navbar-nav flex-row">
             <div class="dropdown">
               <a
@@ -103,7 +114,7 @@
                 </li>
               </ul>
             </div>
-
+  
             <!-- Badge -->
             <li class="nav-item me-3">
               <button type="button" class="btn btn-dark btn-btn-primary" data-bs-toggle="modal" data-bs-target="#miModal"><i class="fas fa-shopping-cart"></i><span
@@ -131,6 +142,7 @@
     <!-- Navbar -->
 
     <main>
+
       <div class="modal" tabindex="-1" id="miModal">
         <div class="modal-dialog">
           <div class="modal-content">
@@ -238,11 +250,51 @@
               
                           </div>
               
+
+    <div class="modal" tabindex="-1" id="miModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">¡AÑADIDO AL CARRITO CORRECTAMENTE!</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <section class="h-100 h-custom" style="background-color: #eee;">
+              <div class="container py-5 h-100">
+                <div class="row d-flex justify-content-center align-items-center h-100">
+                  <div class="col">
+                    <div class="card">
+                      <div class="card-body p-4">
+            
+                        <div class="row">
+            
+                          <div class="col-lg-7">
+            
+                            <div class="d-flex justify-content-between align-items-center mb-4">
+                              <div>
+                                <p class="mb-0">Tienes <span id="Cartquantity"></span> articulos en tu carrito.</p>
+                              </div>
+                          
+                            </div>
+            
+                               <div id="productPay">              
+        
+                            
+        
+                               </div>
+                          </div>
+                          <div class="col-lg-5">
+                                <div class="d-flex justify-content-between mb-w">
+                                  <p class="mb-2">Precio Total:</p>
+                                  <p class="mb-2">$<span id="price"></span></p>
+                                </div>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
+
               </section>
                     </div>
                     <div class="modal-footer">
@@ -251,7 +303,17 @@
                     </div>
                   </div>
                 </div>
+
               </div>
+            </section>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn0 btn-primary"><a href="/pay.html">IR A PAGAR</a></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+    
       <section style="background-color: #eee">
         <div
           id="carouselExampleAutoplaying"
@@ -334,7 +396,11 @@
                   </a>
                 </div>
                 <div class="card-body">
+
                   <a href="/productDetail.html" class="text-reset" onclick="renderDetails(49)" >
+
+                  <a href="/productDetail.html" class="text-reset">
+
                     <h5 class="card-title mb-3">Cinto cuero negro</h5>
                   </a>
                   <a href="" class="text-reset">
@@ -1064,7 +1130,11 @@
       crossorigin="anonymous"
     ></script>
     <script src="/home.js"></script>
+
     <script src="./js/cartcounter.js"></script>
+
+    <script src="./js/buscador.js"></script>
+
     <script src="/js/productDetail.js"></script>
   </body>
 </html>
