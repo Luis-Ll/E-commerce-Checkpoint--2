@@ -112,11 +112,11 @@ let carrito =  JSON.parse(localStorage.getItem('carrito'))
             const productId = (product.id)
             const productElement = document.createElement("div"); 
 
+
             productElement.innerHTML = `   <a href="/productDetail.html" onclick="renderDetails(${product.id})">
             <div class="col mb-5" >
 
             <div class="card h-100 border-danger" >
-
                 <!-- Product image-->
                 <img class="card-img-top" src="${product.image}" alt="..." />
                 <!-- Product details-->
@@ -137,7 +137,6 @@ let carrito =  JSON.parse(localStorage.getItem('carrito'))
                 </div>
             </div>
         </div>
-        </a>
             `;
            console.log(productId)
             rootProducts.appendChild(productElement);
@@ -183,7 +182,6 @@ function agregarProducto (id){
 function guardarStorage() {
     localStorage.setItem("carrito",JSON.stringify(carrito))
 }
-
 
 
 
@@ -299,8 +297,9 @@ if (product.length === 0) {
     <p class="text-danger fw-bold text-center fs-2 ">¡Aún no agregaste nada al carrito!</p>
   </div>`;
     
-      
+
 }
+
 
 
 
