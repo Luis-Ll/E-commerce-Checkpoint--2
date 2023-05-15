@@ -433,7 +433,66 @@ const productsAll = [
         description:
             "Tu mejor estilo",
         image: "/assets/empresa4.jfif",
+
+    },
+    {
+        id: 49,
+        cantidad: 1,
+        title: "Cinto Cuero negro",
+        price: 61.99,
+        description:
+            "Eco-cuero negro",
+        image: "https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/belt.webp",
+    },
+    {
+        id: 50,
+        cantidad: 1,
+        title: "Combo Clasico",
+        price: 61.99,
+        description:
+            "Camisa, Vaquero clasico, Zapatos cuero marrón",
+        image: "https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/img%20(4).webp",
+    },
+    {
+        id: 51,
+        cantidad: 1,
+        title: "Zapatilla teen Rosa",
+        price: 50.99,
+        description:
+            "Zapatilla moda joven rosa",
+        image: "https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/shoes%20(3).webp",
+    },
+    
+    {
+        id: 52,
+        title: "Zapatilla Urbana",
+        cantidad: 1,
+        price: 50.99,
+        description:
+            "Zapatilla Urbana Black and wite",
+        image: "https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/img%20(23).webp",
+    },
+    {
+        id: 53,
+        title: "Reloj Clasico Silver",
+        cantidad: 1,
+        price: 61.99,
+        description:
+            "Reloj Dama clasico silver",
+        image: "https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/img%20(17).webp",
+    },
+    {
+        id: 54,
+        title: "Anteojo de sol",
+        cantidad: 1,
+        price: 50.99,
+        description:
+            "Anteojo de sol",
+        image: "https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/img%20(30).webp",
+    },
+
     }
+
 ];
 
 
@@ -442,6 +501,8 @@ function renderDetails(id){
     
    
    const product = productsAll.filter((prenda) => prenda.id === id)
+
+   console.log(product)
 
 
 localStorage.setItem("Products",JSON.stringify(product))
@@ -680,3 +741,36 @@ function renderProduct (){
 };
 
 renderProduct()
+
+
+
+/*  productDetail.innerHTML = ""
+    product.forEach(product =>{
+        const productElement = document.createElement("div"); 
+            productElement.innerHTML = `   
+            <div class="col mb-5" onclick="renderDetails(${product.id})">
+            <div class="card h-100" >
+                <!-- Product image-->
+                <img class="card-img-top" src="${product.image}" alt="..." />
+                <!-- Product details-->
+                <div class="card-body p-4">
+                    <div class="text-center">
+                        <!-- Product name-->
+                        <h5 class="fw-bolder">${product.title}</h5>
+                        <!-- Product price-->
+                        ${product.price}
+                    </div>
+                </div>
+                <!-- Product actions-->
+                <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                    <div class="text-center "><a class="btn btn-outline-dark mt-auto button_cart" onclick="agregarProducto(${product.id})" href="#">Agregar al carrito</a></div>
+                </div>
+            </div>
+        </div>
+            `;
+            productDetail.appendChild(productElement)
+
+    })
+    
+   console.log(product) */
+
