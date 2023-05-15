@@ -106,6 +106,8 @@ let carrito =  JSON.parse(localStorage.getItem('carrito'))
         }
     })
 
+    console.log(products,"estoy en el producto")
+
     const renderProducts = (products) => {
         rootProducts.innerHTML = "";
         products.forEach(product => {
