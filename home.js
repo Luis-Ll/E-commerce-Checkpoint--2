@@ -1,7 +1,7 @@
 
-$(document).ready(function(){
+ $(document).ready(function(){
     $('.dropdown-submenu a.dropdown-toggle').on("click", function(e){
-      $(this).next('ul').toggle();
+      $(this).next('ul').toggle() */
 
 
 
@@ -121,4 +121,4 @@ if (product.length === 0) {
   </div>`;
     
       
-}
+};
