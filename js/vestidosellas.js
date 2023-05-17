@@ -100,10 +100,14 @@ let carrito =  JSON.parse(localStorage.getItem('carrito'))
         products.forEach(product => {
             const productId = (product.id)
             const productElement = document.createElement("div"); 
-
-            productElement.innerHTML = `   <a href="/productDetail.html" onclick="renderDetails(${product.id})">
+            `  
+            
+            
+            
+            <a href="/productDetail.html" class="text-decoration-none text-dark" onclick="renderDetails(${product.id})">
             <div class="col mb-5" >
-            <div class="card h-100 border-danger" >
+
+            <div class="card cardProduct h-100 border-0 shadow-lg rounded" >
 
                 <!-- Product image-->
                 <img class="card-img-top" src="${product.image}" alt="..." />
@@ -112,19 +116,21 @@ let carrito =  JSON.parse(localStorage.getItem('carrito'))
                     <div class="text-center">
                         <!-- Product name-->
                         <h5 class="fw-bolder">${product.title}</h5>
+                        <hr>
                         <!-- Product price-->
-                        <h6 class="fw-bolder">Talles: ${product.talle}</h6>
-                        <h6 class="fw-bolder">Colores: ${product.color}</h6>
-                        <h4 class="fw-bolder black"> $${product.price}</h4>
+                        <button class="bg-success border-0 rounded">$${product.price}</button>
+                        
                    
                     </div>
+                </div>
                 <!-- Product actions-->
                 <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                    <div class="text-center "><a class="btn btn-outline-dark mt-auto button_cart" onclick="agregarProducto(${product.id})" href="#">Agregar al carrito</a></div>
+                    <div class="text-center  "><a class="btn  mt-auto button_cart bg-warning" onclick="agregarProducto(${product.id})" href="#">Agregar al carrito</a></div>
                 </div>
             </div>
         </div>
         </a>
+        
             `;
            console.log(productId)
             rootProducts.appendChild(productElement);
