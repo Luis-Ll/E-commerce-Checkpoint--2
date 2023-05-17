@@ -106,6 +106,8 @@ let carrito =  JSON.parse(localStorage.getItem('carrito'))
         }
     })
 
+    console.log(products,"estoy en el producto")
+
     const renderProducts = (products) => {
         rootProducts.innerHTML = "";
         products.forEach(product => {
@@ -120,6 +122,7 @@ let carrito =  JSON.parse(localStorage.getItem('carrito'))
             <div class="col mb-5" >
 
             <div class="card cardProduct h-100 border-0 shadow-lg rounded" >
+
 
                 <!-- Product image-->
                 <img class="card-img-top" src="${product.image}" alt="..." />
@@ -188,7 +191,6 @@ function agregarProducto (id){
 function guardarStorage() {
     localStorage.setItem("carrito",JSON.stringify(carrito))
 }
-
 
 
 
@@ -306,6 +308,3 @@ if (product.length === 0) {
     
       
 }
-
-
-

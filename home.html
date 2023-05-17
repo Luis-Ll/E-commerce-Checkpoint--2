@@ -142,115 +142,6 @@
     <!-- Navbar -->
 
     <main>
-
-      <div class="modal" tabindex="-1" id="miModal">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title">Modal title</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              <section class="h-100 h-custom" style="background-color: #eee;">
-                <div class="container py-5 h-100">
-                  <div class="row d-flex justify-content-center align-items-center h-100">
-                    <div class="col">
-                      <div class="card">
-                        <div class="card-body p-4">
-              
-                          <div class="row">
-              
-                            <div class="col-lg-7">
-                              <h5 class="mb-3"><a href="/home.html" class="text-body"><i
-                                    class="fas fa-long-arrow-alt-left me-2"></i>Volver a la Tienda</a></h5>
-                              <hr>
-              
-                              <div class="d-flex justify-content-between align-items-center mb-4">
-                                <div>
-                                  <p class="mb-1">Carrito</p>
-                                  <p class="mb-0">Tienes <span id="Cartquantity"></span> articulos en tu carrito.</p>
-                                </div>
-                            
-                              </div>
-              
-                                 <div id="productPay">              
-                                 </div>
-                            </div>
-                            <div class="">
-              
-                              <div class="card  text-white rounded-3">
-                                <div class="card-body hola">
-                                  <div class="d-flex justify-content-between align-items-center mb-4">
-                                    <h5 class="mb-0">Detalles de la Tarjeta</h5>
-                                    <img src="/assets/usuario.jpg"
-                                      class="img-fluid rounded-3" style="width: 45px;" alt="Avatar">
-                                  </div>
-              
-                                  <p class="small mb-2">Tipo de Tarjeta</p>
-                                  <a href="#!" type="submit" class="text-white"><i
-                                      class="fab fa-cc-mastercard fa-2x me-2"></i></a>
-                                  <a href="#!" type="submit" class="text-white"><i
-                                      class="fab fa-cc-visa fa-2x me-2"></i></a>
-                                  <a href="#!" type="submit" class="text-white"><i
-                                      class="fab fa-cc-amex fa-2x me-2"></i></a>
-                                  <a href="#!" type="submit" class="text-white"><i class="fab fa-cc-paypal fa-2x"></i></a>
-              
-                                  <form class="mt-4">
-                                    <div class="form-outline form-white mb-4">
-                                      <input type="text" id="typeName" class="form-control form-control-lg" siez="17"
-                                        placeholder="Nombre del titular de la tarjeta" />
-                                      <label class="form-label" for="typeName">Nombre del titular de la tarjeta</label>
-                                    </div>
-              
-                                    <div class="form-outline form-white mb-4">
-                                      <input type="text" id="typeText" class="form-control form-control-lg" siez="17"
-                                        placeholder="1234 5678 9012 3457" minlength="19" maxlength="19" />
-                                      <label class="form-label" for="typeText">Número de tarjeta</label>
-                                    </div>
-              
-                                    <div class="row mb-4">
-                                      <div class="col-md-6">
-                                        <div class="form-outline form-white">
-                                          <input type="text" id="typeExp" class="form-control form-control-lg"
-                                            placeholder="MM/YYYY" size="7" id="exp" minlength="7" maxlength="7" />
-                                          <label class="form-label" for="typeExp">Vencimiento</label>
-                                        </div>
-                                      </div>
-                                      <div class="col-md-6">
-                                        <div class="form-outline form-white">
-                                          <input type="password" id="typeText" class="form-control form-control-lg"
-                                            placeholder="&#9679;&#9679;&#9679;" size="1" minlength="3" maxlength="3" />
-                                          <label class="form-label" for="typeText">Cvv</label>
-                                        </div>
-                                      </div>
-                                    </div>
-              
-                                  </form>
-              
-                                  <hr class="my-4">
-              
-                            
-              
-                                  <div class="d-flex justify-content-between mb-4">
-                                    <p class="mb-2">Precio Total:</p>
-                                    <p class="mb-2">$<span id="price"></span></p>
-                                  </div>
-              
-                                  <button type="button" class="btn btn-info btn-block btn-lg">
-                                    <div class="d-flex justify-content-between">
-                                      
-                                      <span>Comprar <i class="fas fa-long-arrow-alt-right ms-2"></i></span>
-                                    </div>
-                                  </button>
-              
-                                </div>
-                              </div>
-              
-                            </div>
-              
-                          </div>
-              
-
     <div class="modal" tabindex="-1" id="miModal">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -294,16 +185,6 @@
                     </div>
                   </div>
                 </div>
-
-              </section>
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                      <button type="button" class="btn btn-primary"><a href="/pay.html">Continuar con la compra</a></button>
-                    </div>
-                  </div>
-                </div>
-
               </div>
             </section>
                   </div>
@@ -400,7 +281,6 @@
                   <a href="/productDetail.html" class="text-reset" onclick="renderDetails(49)" >
 
                   <a href="/productDetail.html" class="text-reset">
-
                     <h5 class="card-title mb-3">Cinto cuero negro</h5>
                   </a>
                   <a href="" class="text-reset">
@@ -408,7 +288,7 @@
                   </a>
                   <h6 class="mb-3">$61.99</h6>
 
-                  <button id="button_cart" class="btn button_cart btn-info" onclick="agregarProducto(49)" >
+                  <button id="button_cart" class="btn button_cart btn-info">
                     agregar al carrito
                   </button>
                 </div>
@@ -430,10 +310,9 @@
                       <div
                         class="d-flex justify-content-start align-items-end h-100"
                       >
-                        <a >
                         <h5>
                           <span class="badge bg-success ms-2">Clasico</span>
-                        </h5></a>
+                        </h5>
                       </div>
                     </div>
                     <div class="hover-overlay">
@@ -445,14 +324,14 @@
                   </a>
                 </div>
                 <div class="card-body">
-                  <a class="text-reset" href="/productDetail.html" onclick="renderDetails(50)">
+                  <a href="" class="text-reset">
                     <h5 class="card-title mb-3">Combo Clasico</h5>
                   </a>
                   <a href="" class="text-reset">
                     <p>Combos</p>
                   </a>
                   <h6 class="mb-3">$61.99</h6>
-                  <button id="button_cart" class="btn button_cart btn-info" onclick="agregarProducto(50)">
+                  <button id="button_cart" class="btn button_cart btn-info">
                     agregar al carrito
                   </button>
                 </div>
@@ -486,7 +365,7 @@
                   </a>
                 </div>
                 <div class="card-body">
-                  <a href="/productDetail.html" onclick="renderDetails(51)" class="text-reset">
+                  <a href="" class="text-reset">
                     <h5 class="card-title mb-3">Zapatillas teen rosa</h5>
                   </a>
                   <a href="" class="text-reset">
@@ -496,7 +375,7 @@
                     <s>$61.99</s
                     ><strong class="ms-2 text-danger">$50.99</strong>
                   </h6>
-                  <button id="button_cart" class="btn button_cart btn-info" onclick="agregarProducto(51)">
+                  <button id="button_cart" class="btn button_cart btn-info">
                     agregar al carrito
                   </button>
                 </div>
@@ -535,7 +414,7 @@
                   </a>
                 </div>
                 <div class="card-body">
-                  <a href="/productDetail.html" onclick="renderDetails(52)" class="text-reset">
+                  <a href="" class="text-reset">
                     <h5 class="card-title mb-3">Zapatillas Urbanas</h5>
                   </a>
                   <a href="" class="text-reset">
@@ -545,7 +424,7 @@
                     <s>$61.99</s
                     ><strong class="ms-2 text-danger">$50.99</strong>
                   </h6>
-                  <button id="button_cart" class="btn button_cart btn-info" onclick="agregarProducto(52)">
+                  <button id="button_cart" class="btn button_cart btn-info">
                     agregar al carrito
                   </button>
                 </div>
@@ -582,14 +461,14 @@
                   </a>
                 </div>
                 <div class="card-body">
-                  <a href="/productDetail.html" onclick="renderDetails(53)" class="text-reset">
+                  <a href="" class="text-reset">
                     <h5 class="card-title mb-3">Reloj Clasico Silver</h5>
                   </a>
                   <a href="" class="text-reset">
                     <p>Accesorios</p>
                   </a>
                   <h6 class="mb-3">$61.99</h6>
-                  <button id="button_cart" class="btn button_cart btn-info" onclick="agregarProducto(53)">
+                  <button id="button_cart" class="btn button_cart btn-info">
                     agregar al carrito
                   </button>
                 </div>
@@ -626,7 +505,7 @@
                   </a>
                 </div>
                 <div class="card-body">
-                  <a href="/productDetail.html" onclick="renderDetails(54)" class="text-reset">
+                  <a href="" class="text-reset">
                     <h5 class="card-title mb-3">Anteojos de sol</h5>
                   </a>
                   <a href="" class="text-reset">
@@ -636,7 +515,7 @@
                     <s>$61.99</s
                     ><strong class="ms-2 text-danger">$50.99</strong>
                   </h6>
-                  <button id="button_cart" class="btn button_cart btn-info" onclick="agregarProducto(54)">
+                  <button id="button_cart" class="btn button_cart btn-info">
                     agregar al carrito
                   </button>
                 </div>
@@ -1130,11 +1009,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="/home.js"></script>
-
-    <script src="./js/cartcounter.js"></script>
-
     <script src="./js/buscador.js"></script>
-
     <script src="/js/productDetail.js"></script>
   </body>
 </html>

@@ -141,13 +141,8 @@ let carrito =  JSON.parse(localStorage.getItem('carrito'))
 
 
     //Contador del carrito//
-
-
-const cartView = document.getElementById("cart");
-
 const buttonCart = document.querySelectorAll(".button_cart");
 // const cartView = document.getElementById("cart");
-
 let counter = 0;
 
 
@@ -183,6 +178,7 @@ function guardarStorage() {
 
 const productsPay = document.getElementById("productPay");
 const price = document.getElementById("price");
+const cartView = document.getElementById("cart");
 const cartquantity = document.getElementById("Cartquantity")
 
 let product = JSON.parse(localStorage.getItem('carrito'))

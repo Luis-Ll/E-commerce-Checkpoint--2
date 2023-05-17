@@ -1,7 +1,4 @@
 
-/* $(document).ready(function(){
-  $('.dropdown-submenu a.dropdown-toggle').on("click", function(e){
-    $(this).next('ul').toggle();})}) */
 
 /*Ofert Product*/
 
@@ -117,9 +114,20 @@
 
         
 
-$(document).ready(function(){
+
+
+
+
+      
+
+
+
+
+/*  $(document).ready(function(){
+ $(document).ready(function(){
     $('.dropdown-submenu a.dropdown-toggle').on("click", function(e){
-      $(this).next('ul').toggle();
+    $('.dropdown-submenu a.dropdown-toggle').on("click", function(e){
+      $(this).next('ul').toggle()  */
 
 
 
@@ -239,5 +247,11 @@ if (product.length === 0) {
   </div>`;
     
       
-}
+};    productsPay.innerHTML = `
+    <div class="bg-danger-subtle d-flex align-items-center justify-content-center rounded">
+    <p class="text-danger fw-bold text-center fs-2 ">¡Aún no agregaste nada al carrito!</p>
+  </div>`;
+    
+      
+};
 

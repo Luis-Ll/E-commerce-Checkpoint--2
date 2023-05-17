@@ -147,6 +147,7 @@ let carrito =  JSON.parse(localStorage.getItem('carrito'))
 
 
     //Contador del carrito//
+const buttonCart = document.querySelectorAll(".button_cart");
 
 let counter = 0;
 

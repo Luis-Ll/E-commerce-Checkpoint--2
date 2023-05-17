@@ -2,6 +2,7 @@ const productDetail = document.getElementById("detalle")
 
 
 
+
 const productsAll = [
     {
         id: 1,
@@ -432,73 +433,15 @@ const productsAll = [
         description:
             "Tu mejor estilo",
         image: "/assets/empresa4.jfif",
-    },
-    {
-        id: 49,
-        cantidad: 1,
-        title: "Cinto Cuero negro",
-        price: 61.99,
-        description:
-            "Eco-cuero negro",
-        image: "https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/belt.webp",
-    },
-    {
-        id: 50,
-        cantidad: 1,
-        title: "Combo Clasico",
-        price: 61.99,
-        description:
-            "Camisa, Vaquero clasico, Zapatos cuero marrón",
-        image: "https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/img%20(4).webp",
-    },
-    {
-        id: 51,
-        cantidad: 1,
-        title: "Zapatilla teen Rosa",
-        price: 50.99,
-        description:
-            "Zapatilla moda joven rosa",
-        image: "https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/shoes%20(3).webp",
-    },
-    
-    {
-        id: 52,
-        title: "Zapatilla Urbana",
-        cantidad: 1,
-        price: 50.99,
-        description:
-            "Zapatilla Urbana Black and wite",
-        image: "https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/img%20(23).webp",
-    },
-    {
-        id: 53,
-        title: "Reloj Clasico Silver",
-        cantidad: 1,
-        price: 61.99,
-        description:
-            "Reloj Dama clasico silver",
-        image: "https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/img%20(17).webp",
-    },
-    {
-        id: 54,
-        title: "Anteojo de sol",
-        cantidad: 1,
-        price: 50.99,
-        description:
-            "Anteojo de sol",
-        image: "https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/img%20(30).webp",
-    },
-    
+    }
 ];
 
 
 
 function renderDetails(id){
-    console.log("id",id)
+    
    
    const product = productsAll.filter((prenda) => prenda.id === id)
-
-   console.log(product)
 
 
 localStorage.setItem("Products",JSON.stringify(product))
@@ -506,12 +449,9 @@ localStorage.setItem("Products",JSON.stringify(product))
 
 }
 
-let detalle = JSON.parse(localStorage.getItem("Products"));
-
-console.log("esty en el producto", detalle)
-
-
-const productdet = detalle.map(product => {
+let product = JSON.parse(localStorage.getItem("Products"));
+console.log("esty en el producto", product)
+const productdet = product.map(product => {
     return {
         id: product.id,
         cantidad: product.cantidad,
@@ -615,8 +555,8 @@ function renderProduct (){
 
             </div>
             <a href="#" class="btn btn-warning shadow-0"> Buy now </a>
-            <a href="#" class="btn btn-primary shadow-0" onclick="agregarProducto(${product.id})"> <i class="me-1 fa fa-shopping-basket"></i> Agregar al Carrito </a>
-            <a href="#" class="btn btn-light border border-secondary py-2 icon-hover px-3"> <i class="me-1 fa fa-heart fa-lg"></i> Guardar</a>
+            <a href="#" class="btn btn-primary shadow-0"> <i class="me-1 fa fa-shopping-basket"></i> Add to cart </a>
+            <a href="#" class="btn btn-light border border-secondary py-2 icon-hover px-3"> <i class="me-1 fa fa-heart fa-lg"></i> Save </a>
           </div>
         </main>
       </div>
@@ -740,5 +680,3 @@ function renderProduct (){
 };
 
 renderProduct()
-
-
