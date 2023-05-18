@@ -114,14 +114,12 @@ let carrito =  JSON.parse(localStorage.getItem('carrito'))
             const productId = (product.id)
             const productElement = document.createElement("div"); 
 
-            productElement.innerHTML = `  
-            
-            
-            
-            <a href="/productDetail.html" class="text-decoration-none text-dark" onclick="renderDetails(${product.id})">
+
+            productElement.innerHTML = `   <a href="/productDetail.html" class="text-decoration-none text-dark" onclick="renderDetails(${product.id})">
             <div class="col mb-5" >
 
-            <div class="card cardProduct h-100 border-0 shadow-lg rounded" >
+            <div class="card h-100 rounded border-0 shadow-lg" >
+
 
 
                 <!-- Product image-->
@@ -131,7 +129,6 @@ let carrito =  JSON.parse(localStorage.getItem('carrito'))
                     <div class="text-center">
                         <!-- Product name-->
                         <h5 class="fw-bolder">${product.title}</h5>
-                        <hr>
                         <!-- Product price-->
                         <button class="bg-success border-0 rounded">$${product.price}</button>
                         
@@ -144,8 +141,6 @@ let carrito =  JSON.parse(localStorage.getItem('carrito'))
                 </div>
             </div>
         </div>
-        </a>
-        
             `;
            console.log(productId)
             rootProducts.appendChild(productElement);
