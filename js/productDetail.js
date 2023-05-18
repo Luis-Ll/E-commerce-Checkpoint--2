@@ -1,7 +1,7 @@
 const productDetail = document.getElementById("detalle")
 
 
-
+console.log("estoy en detalles")
 
 const productsAll = [
     {
@@ -441,17 +441,17 @@ const productsAll = [
 function renderDetails(id){
     
    
-   const product = productsAll.filter((prenda) => prenda.id === id)
+   const detalleProduct = productsAll.filter((prenda) => prenda.id === id)
 
 
-localStorage.setItem("Products",JSON.stringify(product))
+localStorage.setItem("Products",JSON.stringify(detalleProduct))
 
 
 }
 
-let product = JSON.parse(localStorage.getItem("Products"));
-console.log("esty en el producto", product)
-const productdet = product.map(product => {
+let productdetalle = JSON.parse(localStorage.getItem("Products"));
+console.log("esty en el producto", productdetalle)
+const productdet = productdetalle.map(product => {
     return {
         id: product.id,
         cantidad: product.cantidad,
