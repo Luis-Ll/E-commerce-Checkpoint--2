@@ -35,3 +35,22 @@ a{
 .logo-mystic{
     padding-left: 10%;
 }
+
+.back-button {
+    color: #000000 !important;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 0.4em 1.1em;
+    background: rgba(0, 0, 0, 0);
+    border: 2px solid;
+    border-color: #000000;
+    border-radius: 5px;
+    transition: all 1s ease;
+    text-decoration: none;
+    margin: 5px;
+    
+  }
+  .back-button:hover {
+    background: #000000;
+    color: #ffffff !important;
+  }

@@ -50,6 +50,7 @@
   border-color: #000000;
   transition: all 1s ease;
   text-decoration: none;
+  margin: 5px;
 }
 .btn:hover {
   background: #000000;
@@ -154,4 +155,26 @@
   
   .modal-content{
 	border-radius: 0%;
+  }
+  
+  .dropdown{
+    padding-bottom: 1px;
+    padding: 5px;
+  }
+
+  .navbar-collapse {
+    flex-grow: 0;
+  }
+
+  .user{
+    padding-top: 1%;
+    margin: 5px;
+  }
+
+  .navbar-nav{
+    display: flex;
+  }
+
+  .nav-item{
+    padding-top: 5px;
   }
