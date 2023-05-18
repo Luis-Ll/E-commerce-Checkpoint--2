@@ -116,14 +116,13 @@ let carrito =  JSON.parse(localStorage.getItem('carrito'))
                         <!-- Product name-->
                         <h5 class="fw-bolder">${product.title}</h5>
                         <!-- Product price-->
-                        <h6 class="fw-bolder">Talles: ${product.talle}</h6>
-                        <h6 class="fw-bolder">Colores: ${product.color}</h6>
-                        <h4 class="fw-bolder black"> $${product.price}</h4>
+                        <button class="border border-primary rounded">$${product.price}</button>
+                        
                    
                     </div>
                 <!-- Product actions-->
                 <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                    <div class="text-center "><a class="btn btn-outline-dark mt-auto button_cart" onclick="agregarProducto(${product.id})" href="#">Agregar al carrito</a></div>
+                    <div class="text-center  "><a class="btn  mt-auto button_cart border-0 bg-warning shadow-lg" onclick="agregarProducto(${product.id})" href="#">Agregar al carrito</a></div>
                 </div>
             </div>
         </div>

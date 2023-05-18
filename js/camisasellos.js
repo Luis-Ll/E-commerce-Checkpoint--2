@@ -118,7 +118,8 @@ let carrito =  JSON.parse(localStorage.getItem('carrito'))
             productElement.innerHTML = `   <a href="/productDetail.html" class="text-decoration-none text-dark" onclick="renderDetails(${product.id})">
             <div class="col mb-5" >
 
-            <div class="card h-100 border-danger shadow-lg" >
+            <div class="card h-100 rounded border-0 shadow-lg" >
+
 
 
                 <!-- Product image-->
@@ -129,14 +130,14 @@ let carrito =  JSON.parse(localStorage.getItem('carrito'))
                         <!-- Product name-->
                         <h5 class="fw-bolder">${product.title}</h5>
                         <!-- Product price-->
-                        <button class="bg-info rounded">$${product.price}</button>
+                        <button class="border border-primary rounded">$${product.price}</button>
                         
                    
                     </div>
                 </div>
                 <!-- Product actions-->
                 <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                    <div class="text-center  "><a class="btn btn-outline-dark mt-auto button_cart bg-success" onclick="agregarProducto(${product.id})" href="#">Agregar al carrito</a></div>
+                    <div class="text-center  "><a class="btn  mt-auto button_cart border-0 bg-warning shadow-lg" onclick="agregarProducto(${product.id})" href="#">Agregar al carrito</a></div>
                 </div>
             </div>
         </div>

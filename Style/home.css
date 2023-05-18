@@ -25,6 +25,27 @@
   padding-bottom: 3%;
 }
 
+/**Cards Products**/
+
+.cardProduct{
+  background-color: #f3f7cf;
+}
+.button_cart{
+  background-color: cornflowerblue;
+}
+
+/**Navbar**/
+
+/* @media screen and (max-width:808px){
+.logo{
+  padding-left: 5%;
+  top: 0px;
+  height: 100%;
+}
+}
+ */
+
+
 /**Footer style**/
 .icon_git{
   color:gray
@@ -79,17 +100,6 @@
   width: 200px;
 }
 
-/*Navbar*/
-
-/* @media screen and (max-width:808px){
-.logo{
-  padding-left: 5%;
-  top: 0px;
-  height: 100%;
-}
-}
- */
-
     /*modal*/
 
 .card{
@@ -97,7 +107,7 @@
 	border: solid 1px rgba(0, 0, 0, 0.719);
   }
   .modal-header .btn-close {
-	padding: calc(var(--bs-modal-header-padding-y) * -6.5) calc(var(--bs-modal-header-padding-x) * -);
+	padding: calc(var(--bs-modal-header-padding-y) * -6.5) calc(var(--bs-modal-header-padding-x) * -6.5);
 	margin: calc(-8 * var(--bs-modal-header-padding-y)) calc(-1.8 * var(--bs-modal-header-padding-x)) calc(-0.5 * var(--bs-modal-header-padding-y)) auto;
   }
   
