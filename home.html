@@ -26,24 +26,6 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-
-          <div class="navbar-nav">
-            <div class="w-auto my-auto">
-              <form class="d-flex input-group  border-end-0">
-                <input id="buscador" autocomplete="off" type="search" class="form-control form-outline rounded"
-                  placeholder="Buscar" style="min-width: 130px" />
-
-                <button onclick="buscarProductos()" class="input-group-text border-start-0 d-md-flex">
-                  <i class="fas fa-search"></i>
-                </button>
-              </form>
-              <div id="containerProductos">
-                <div id="resultados" class=" bg-white rounded text-center mt-1 boxSearch">
-
-                </div>
-              </div>
-
-            </div>
             <div class="dropdown">
               <a class="btn btn-dark dropdown-toggle btn-btn-primary" href="#" role="button" id="dropdownMenuLink"
                 data-bs-toggle="dropdown" aria-expanded="false">
@@ -60,6 +42,8 @@
                   <a class="dropdown-item" href="/jeanellas.html">Jeans</a>
                 </li>
               </ul>
+            </div>
+            <div class="dropdown">
               <a class="btn btn-dark dropdown-toggle btn-btn-primary" href="#" role="button" id="dropdownMenuLink"
                 data-bs-toggle="dropdown" aria-expanded="false">
                 Hombre
@@ -76,24 +60,38 @@
                 </li>
               </ul>
             </div>
-            
-            <li class="nav-item me-3">
-              <button type="button" class="btn btn-dark btn-btn-primary" data-bs-toggle="modal" data-bs-target="#miModal"><i class="fas fa-shopping-cart"></i><span
-              id="cart"
-              class="badge rounded-pill badge-notification bg-danger"
-              >0</span></button>
-           </li>
 
+          <li class="nav-item me-3">
+            <button type="button" class="btn btn-dark btn-btn-primary" data-bs-toggle="modal"
+              data-bs-target="#miModal"><i class="fas fa-shopping-cart"></i><span id="cart"
+                class="badge rounded-pill badge-notification bg-danger">0</span></button>
+          </li>
 
-            <div class="user">
-              <a href="./login.html">
-                <img
-                  src="https://storage.googleapis.com/media.clinicavisualyauditiva.com/images/2019/11/211fd983-default-user-image.png"
-                  class="rounded-circle" height="35" alt="imagen de usuario" /></a>
+          <div class="w-auto my-auto">
+            <form class="d-flex input-group  border-end-0">
+              <input id="buscador" autocomplete="off" type="search" class="form-control form-outline rounded"
+                placeholder="Buscar" style="min-width: 130px" />
+
+              <button onclick="buscarProductos()" class="input-group-text border-start-0 d-md-flex">
+                <i class="fas fa-search"></i>
+              </button>
+            </form>
+            <div id="containerProductos">
+              <div id="resultados" class=" bg-white rounded text-center mt-1 boxSearch">
+
+              </div>
             </div>
-          </div>
 
+          </div>
+          <div class="user">
+            <a href="./login.html">
+              <img
+                src="https://storage.googleapis.com/media.clinicavisualyauditiva.com/images/2019/11/211fd983-default-user-image.png"
+                class="rounded-circle" height="35" alt="imagen de usuario" /></a>
+          </div>
         </div>
+
+      </div>
       </div>
     </nav>
   </head>

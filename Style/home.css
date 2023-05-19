@@ -54,7 +54,6 @@
   border-color: #000000;
   transition: all 1s ease;
   text-decoration: none;
-  margin: 5px;
 }
 
 .btn:hover {
@@ -170,6 +169,12 @@
   padding: 5px;
 }
 
+li{
+  list-style-type: none;
+  margin: 0%;
+  padding: 0%;
+}
+
 .navbar-collapse {
   flex-grow: 0;
 }
@@ -177,14 +182,15 @@
 .user {
   padding-top: 1%;
   margin: 5px;
+  text-align: right;
 }
 
-.navbar-nav {
-  display: flex;
+.dropdown{
+  display: inline-block;
 }
 
-.nav-item {
-  padding-top: 5px;
+.nav-item{
+  display: inline-block;
 }
 
 @media (max-width: 768px) {
