@@ -1,7 +1,7 @@
 const productDetail = document.getElementById("detalle")
 
 
-
+console.log("estoy en detalles")
 
 const productsAll = [
     {
@@ -433,7 +433,62 @@ const productsAll = [
         description:
             "Tu mejor estilo",
         image: "/assets/empresa4.jfif",
-    }
+    },
+    {
+        id: 49,
+        cantidad: 1,
+        title: "Cinto Cuero negro",
+        price: 61.99,
+        description:
+            "Eco-cuero negro",
+        image: "https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/belt.webp",
+    },
+    {
+        id: 50,
+        cantidad: 1,
+        title: "Combo Clasico",
+        price: 61.99,
+        description:
+            "Camisa, Vaquero clasico, Zapatos cuero marrón",
+        image: "https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/img%20(4).webp",
+    },
+    {
+        id: 51,
+        cantidad: 1,
+        title: "Zapatilla teen Rosa",
+        price: 50.99,
+        description:
+            "Zapatilla moda joven rosa",
+        image: "https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/shoes%20(3).webp",
+    },
+    
+    {
+        id: 52,
+        title: "Zapatilla Urbana",
+        cantidad: 1,
+        price: 50.99,
+        description:
+            "Zapatilla Urbana Black and wite",
+        image: "https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/img%20(23).webp",
+    },
+    {
+        id: 53,
+        title: "Reloj Clasico Silver",
+        cantidad: 1,
+        price: 61.99,
+        description:
+            "Reloj Dama clasico silver",
+        image: "https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/img%20(17).webp",
+    },
+    {
+        id: 54,
+        title: "Anteojo de sol",
+        cantidad: 1,
+        price: 50.99,
+        description:
+            "Anteojo de sol",
+        image: "https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/img%20(30).webp",
+    },
 ];
 
 
@@ -441,17 +496,17 @@ const productsAll = [
 function renderDetails(id){
     
    
-   const product = productsAll.filter((prenda) => prenda.id === id)
+   const detalleProduct = productsAll.filter((prenda) => prenda.id === id)
 
 
-localStorage.setItem("Products",JSON.stringify(product))
+localStorage.setItem("Products",JSON.stringify(detalleProduct))
 
 
 }
 
-let product = JSON.parse(localStorage.getItem("Products"));
-console.log("esty en el producto", product)
-const productdet = product.map(product => {
+let productdetalle = JSON.parse(localStorage.getItem("Products"));
+console.log("esty en el producto", productdetalle)
+const productdet = productdetalle.map(product => {
     return {
         id: product.id,
         cantidad: product.cantidad,
@@ -478,20 +533,9 @@ function renderProduct (){
             </a>
           </div>
           <div class="d-flex justify-content-center mb-3">
-            <a data-fslightbox="mygalley" class="border mx-1 rounded-2" target="_blank" data-type="image" href="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/items/detail1/big1.webp" class="item-thumb">
-              <img width="60" height="60" class="rounded-2" src="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/items/detail1/big1.webp" />
-            </a>
-            <a data-fslightbox="mygalley" class="border mx-1 rounded-2" target="_blank" data-type="image" href="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/items/detail1/big2.webp" class="item-thumb">
-              <img width="60" height="60" class="rounded-2" src="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/items/detail1/big2.webp" />
-            </a>
-            <a data-fslightbox="mygalley" class="border mx-1 rounded-2" target="_blank" data-type="image" href="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/items/detail1/big3.webp" class="item-thumb">
-              <img width="60" height="60" class="rounded-2" src="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/items/detail1/big3.webp" />
-            </a>
-            <a data-fslightbox="mygalley" class="border mx-1 rounded-2" target="_blank" data-type="image" href="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/items/detail1/big4.webp" class="item-thumb">
-              <img width="60" height="60" class="rounded-2" src="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/items/detail1/big4.webp" />
-            </a>
-            <a data-fslightbox="mygalley" class="border mx-1 rounded-2" target="_blank" data-type="image" href="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/items/detail1/big.webp" class="item-thumb">
-              <img width="60" height="60" class="rounded-2" src="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/items/detail1/big.webp" />
+      
+            <a data-fslightbox="mygalley" class="border mx-1 rounded-2" target="_blank" data-type="image" href=${product.image}" class="item-thumb">
+              <img width="60" height="60" class="rounded-2" src="${product.image}" />
             </a>
           </div>
           <!-- thumbs-wrap.// -->
@@ -554,9 +598,9 @@ function renderProduct (){
               </div>
 
             </div>
-            <a href="#" class="btn btn-warning shadow-0"> Buy now </a>
-            <a href="#" class="btn btn-primary shadow-0"> <i class="me-1 fa fa-shopping-basket"></i> Add to cart </a>
-            <a href="#" class="btn btn-light border border-secondary py-2 icon-hover px-3"> <i class="me-1 fa fa-heart fa-lg"></i> Save </a>
+            <a href="#" class="btn bg-success border-0 shadow-0">Comprar </a>
+            <a href="#" class="btn bg-warning border-0 shadow-0" onclick="agregarProducto(${product.id})"> <i class="me-1 fa fa-shopping-basket"></i>Agregar al carrito </a>
+            <a href="#" class="btn bg-danger border-0 border-secondary py-2 icon-hover px-3"> <i class="me-1 fa fa-heart fa-lg"></i> Guardar </a>
           </div>
         </main>
       </div>
