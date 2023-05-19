@@ -105,9 +105,14 @@ let carrito =  JSON.parse(localStorage.getItem('carrito'))
         products.forEach(product => {
             const productId = (product.id)
             const productElement = document.createElement("div"); 
-            productElement.innerHTML = `   
-            <div class="col mb-5">
-            <div class="card h-100 border-danger" >
+
+            productElement.innerHTML = `   <a href="/productDetail.html" class="text-decoration-none text-dark" onclick="renderDetails(${product.id})">
+            <div class="col mb-5" >
+
+            <div class="card h-100 rounded border-0 shadow-lg" >
+
+
+
                 <!-- Product image-->
                 <img class="card-img-top" src="${product.image}" alt="..." />
                 <!-- Product details-->
@@ -120,6 +125,7 @@ let carrito =  JSON.parse(localStorage.getItem('carrito'))
                         
                    
                     </div>
+                </div>
                 <!-- Product actions-->
                 <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                     <div class="text-center  "><a class="btn  mt-auto button_cart bg-warning" onclick="agregarProducto(${product.id})" href="#">Agregar al carrito</a></div>
