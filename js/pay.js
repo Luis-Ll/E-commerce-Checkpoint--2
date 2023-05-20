@@ -3,8 +3,12 @@ const price = document.getElementById("price");
 const cartView = document.getElementById("cart");
 const cartquantity = document.getElementById("Cartquantity");
 
+
+
 let product = JSON.parse(localStorage.getItem("carrito"));
 cartquantity.innerText = `Tienes ${product.length} articulos en tu carrito.`;
+
+cartView.innerText =  `${product.length}`;
 
 
 const producPay = product.map((prod) => {
@@ -27,7 +31,7 @@ const renderProducts = (producPay) => {
   producPay.forEach((prod) => {
     const productElement = document.createElement("div");
     productElement.innerHTML = `   
-           <div class="card mt-2 mb-2 mb-lg-0 shadow-lg cardPay">
+           <div class="card mt-2 mb-2 mb-lg-0 shadow-lg cardPay border-0 rounded">
         <div class="card-body">
           <div class="d-flex justify-content-between">
             <div class="d-flex flex-row align-items-center">
@@ -94,6 +98,7 @@ function quitarProducto(id) {
   const producPay = product.map((prod) => {
     return {
       id: prod.id,
+      cantidad: prod.cantidad,
       title: prod.title,
       price: prod.price,
       description: prod.description,
@@ -104,6 +109,7 @@ function quitarProducto(id) {
 
   renderProducts(producPay);
   deleteStorage();
+  cartView.innerText =  `${product.length}`;
 }
 
 function deleteStorage() {
