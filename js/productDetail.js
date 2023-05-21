@@ -1,7 +1,6 @@
 const productDetail = document.getElementById("detalle")
 
 
-console.log("estoy en detalles")
 
 const productsAll = [
     {
@@ -490,7 +489,36 @@ const productsAll = [
         image: "https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/img%20(30).webp",
     },
 ];
+let carrito =  JSON.parse(localStorage.getItem('carrito'))
+function agregarProducto (id){
 
+        
+    const exist = carrito.some(producto => producto.id === id)
+    if(exist){
+        const prodExist = carrito.map(product => {
+            if(product.id === id){
+                product.cantidad++;
+            }
+            })
+            console.log("ya existe")
+            guardarStorage()
+    }else{
+        const item = productsAll.find((prenda) => prenda.id === id)
+        carrito.push(item)
+    
+        console.log(carrito)
+        guardarStorage()
+
+        cartView.innerText =  `${carrito.length}`;
+    }
+ 
+    
+ 
+}
+
+function guardarStorage() {
+    localStorage.setItem("carrito",JSON.stringify(carrito))
+}
 
 
 function renderDetails(id){
