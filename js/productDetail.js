@@ -489,13 +489,16 @@ const productsAll = [
         image: "https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/img%20(30).webp",
     },
 ];
-let carrito =  JSON.parse(localStorage.getItem('carrito'))
+let cart =  JSON.parse(localStorage.getItem('carrito'))
+
+
+
 function agregarProducto (id){
 
         
-    const exist = carrito.some(producto => producto.id === id)
+    const exist = cart.some(producto => producto.id === id)
     if(exist){
-        const prodExist = carrito.map(product => {
+        const prodExist = cart.map(product => {
             if(product.id === id){
                 product.cantidad++;
             }
@@ -504,12 +507,12 @@ function agregarProducto (id){
             guardarStorage()
     }else{
         const item = productsAll.find((prenda) => prenda.id === id)
-        carrito.push(item)
+        cart.push(item)
     
-        console.log(carrito)
+        
         guardarStorage()
 
-        cartView.innerText =  `${carrito.length}`;
+        cartView.innerText =  `${cart.length}`;
     }
  
     
@@ -517,7 +520,7 @@ function agregarProducto (id){
 }
 
 function guardarStorage() {
-    localStorage.setItem("carrito",JSON.stringify(carrito))
+    localStorage.setItem("carrito",JSON.stringify(cart))
 }
 
 
