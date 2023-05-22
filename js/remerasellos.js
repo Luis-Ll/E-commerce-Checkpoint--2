@@ -108,30 +108,35 @@ let carrito =  JSON.parse(localStorage.getItem('carrito'))
 
             productElement.innerHTML = `   <a href="/productDetail.html" class="text-decoration-none text-dark" onclick="renderDetails(${product.id})">
             <div class="col mb-5" >
+            <div class="col">
+              <div class="card h-100 shadow-lg border-0 rounded" style="background-color: #f0edd4;">
+                <img
+                  src="${product.image}"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <div class="clearfix mb-3">
+                    <span class="float-start badge rounded-pill bg-success"
+                      >${product.price}</span
+                    >
+                    <span class="float-end"><a href="#"></a></span>
+                  </div>
+                  <h5 class="card-title">
+                ${product.title}
+                  </h5>
+                  
+                  <hr>
+                  <span>${product.talle}</span>
+                  <hr>
 
-            <div class="card h-100 rounded border-0 shadow-lg" >
-
-
-
-                <!-- Product image-->
-                <img class="card-img-top" src="${product.image}" alt="..." />
-                <!-- Product details-->
-                <div class="card-body p-4">
-                    <div class="text-center">
-                        <!-- Product name-->
-                        <h5 class="fw-bolder">${product.title}</h5>
-                        <!-- Product price-->
-                        <button class="bg-success border-0 rounded">$${product.price}</button>
-                        
-                   
-                    </div>
+                  <div class="d-grid gap-2 my-4">
+                    <a href="#" class="btn bg-warning border-0" onclick="agregarProducto(${product.id})">Agregar al carrito</a>
+                  </div>
                 </div>
-                <!-- Product actions-->
-                <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                    <div class="text-center  "><a class="btn  mt-auto button_cart bg-warning" onclick="agregarProducto(${product.id})" href="#">Agregar al carrito</a></div>
-                </div>
+              </div>
             </div>
-        </div>
+        </a>
             `;
            console.log(productId)
             rootProducts.appendChild(productElement);
@@ -141,15 +146,10 @@ let carrito =  JSON.parse(localStorage.getItem('carrito'))
     renderProducts(products);
 
 
-    //Contador del carrito//
-const buttonCart = document.querySelectorAll(".button_cart");
-
-let counter = 0;
 
 
 function agregarProducto (id){
-        counter++;
-        cartView.textContent = counter;
+
         
         const exist = carrito.some(producto => producto.id === id)
         if(exist){
@@ -166,6 +166,7 @@ function agregarProducto (id){
         
             guardarStorage()
 
+            cartView.innerText =  `${carrito.length}`;
         }
      
         
@@ -184,6 +185,7 @@ const cartquantity = document.getElementById("Cartquantity")
 
 let product = JSON.parse(localStorage.getItem('carrito'))
 
+cartView.innerText =  `${carrito.length}`;
 
 console.log(product)
 

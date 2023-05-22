@@ -4,11 +4,6 @@
 
 
 
-
-
-    //Contador del carrito//
-    const buttonCart = document.querySelectorAll(".button_cart");
-    let counter = 0;
  
     
     
@@ -80,10 +75,6 @@
 
     ]
 
-      console.log(id)
-            counter++;
-            console.log(counter, "counter")
-            cartView.textContent = counter;
             
             const exist = carrito.some(producto => carrito.id === id)
             if(exist){
@@ -106,7 +97,7 @@
               localStorage.setItem("carrito",JSON.stringify(carrito))
           }
           
-          }       
+          }      ; 
 
 
     
@@ -123,11 +114,11 @@
 
 
 
-/*  $(document).ready(function(){
+$(document).ready(function(){
  $(document).ready(function(){
     $('.dropdown-submenu a.dropdown-toggle').on("click", function(e){
     $('.dropdown-submenu a.dropdown-toggle').on("click", function(e){
-      $(this).next('ul').toggle()  */
+      $(this).next('ul').toggle() 
 
 
 
@@ -247,11 +238,5 @@ if (product.length === 0) {
   </div>`;
     
       
-};    productsPay.innerHTML = `
-    <div class="bg-danger-subtle d-flex align-items-center justify-content-center rounded">
-    <p class="text-danger fw-bold text-center fs-2 ">¡Aún no agregaste nada al carrito!</p>
-  </div>`;
-    
-      
-};
+};  
 

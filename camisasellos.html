@@ -11,125 +11,81 @@
 </head>
 <body>
   <head>
-    <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
-      <div
-        class="container-fluid justify-content-center justify-content-md-between"
-      >
-        <div class="d-flex my-2 my-sm-0">
-          <a
-            class="navbar-brand me-2 mb-1 d-flex justify-content-center"
-            href="home.html"
-          >
-            <img
-              src="./assets/2.png"
-              height="50px"
-              alt=""
-              loading="lazy"
-            />
-          </a>
-
-          <!-- Search form -->
+    <nav class="navbar fixed-top navbar-expand-lg " style="background-color: #f9fbe7;">
+      <div class="container-fluid">
+        <a class="navbar-brand me-2 mb-1 d-flex justify-content-center" href="home.html">
+          <img src="./assets/2.png" height="50px" alt="" loading="lazy" />
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="dropdown">
+              <a class="btn btn-dark dropdown-toggle btn-btn-primary" href="#" role="button" id="dropdownMenuLink"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Mujer
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="/vestidosellas.html">Vestidos</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/zapatosellas.html">Zapatos</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/jeanellas.html">Jeans</a>
+                </li>
+              </ul>
+            </div>
+            <div class="dropdown">
+              <a class="btn btn-dark dropdown-toggle btn-btn-primary" href="#" role="button" id="dropdownMenuLink"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Hombre
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="camisasellos.html">Camisas</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/remerasellos.html">Remeras</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="zapatillasellos.html">Zapatillas</a>
+                </li>
+              </ul>
+            </div>
+          <li class="nav-item me-3">
+            <button type="button" class="btn btn-dark btn-btn-primary" data-bs-toggle="modal"
+              data-bs-target="#miModal"><i class="fas fa-shopping-cart"></i><span id="cart"
+                class="badge rounded-pill badge-notification bg-danger">0</span></button>
+          </li>
           <div class="w-auto my-auto">
             <form class="d-flex input-group  border-end-0">
-              <input
-              id="buscador"
-                autocomplete="off"
-                type="search"
-                class="form-control form-outline rounded"
-                placeholder="Buscar"
-                style="min-width: 130px"
-              />
-              
-           <button onclick="buscarProductos()" class="input-group-text border-start-0 d-md-flex">
-           <i class="fas fa-search"></i>
-           </button>
+              <input id="buscador" autocomplete="off" type="search" class="form-control form-outline rounded"
+                placeholder="Buscar" style="min-width: 130px" />
+              <button onclick="buscarProductos()" class="input-group-text border-start-0 d-md-flex">
+                <i class="fas fa-search"></i>
+              </button>
             </form>
             <div id="containerProductos">
               <div id="resultados" class=" bg-white rounded text-center mt-1 boxSearch">
-                
               </div>
             </div>
-          
           </div>
-      
-        </div>
-
-        <ul class="navbar-nav flex-row">
-          <div class="dropdown">
-            <a
-              class="btn btn-dark dropdown-toggle btn-btn-primary"
-              href="#"
-              role="button"
-              id="dropdownMenuLink"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              Mujer
-            </a>
-            <ul class="dropdown-menu">
-              <li>
-                <a class="dropdown-item" href="/vestidosellas.html">Vestidos</a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="/zapatosellas.html"
-                  >Zapatos</a
-                >
-              </li>
-              <li>
-                <a class="dropdown-item" href="/jeanellas.html">Jeans</a>
-              </li>
-            </ul>
-            <a
-              class="btn btn-dark dropdown-toggle btn-btn-primary"
-              href="#"
-              role="button"
-              id="dropdownMenuLink"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              Hombre
-            </a>
-            <ul class="dropdown-menu">
-              <li>
-                <a class="dropdown-item" href="camisasellos.html">Camisas</a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="/remerasellos.html"
-                  >Remeras</a
-                >
-              </li>
-              <li>
-                <a class="dropdown-item" href="zapatillasellos.html"
-                  >Zapatillas</a
-                >
-              </li>
-            </ul>
-          </div>
-
-          <!-- Badge -->
-          <li class="nav-item me-3">
-            <button type="button" class="btn btn-dark btn-btn-primary" data-bs-toggle="modal" data-bs-target="#miModal"><i class="fas fa-shopping-cart"></i><span
-             id="cart"
-             class="badge rounded-pill badge-notification bg-danger"
-             >0</span></button>
-         </li>
-          
-          <!-- Notification dropdown -->
-          <!-- Login -->
           <div class="user">
             <a href="./login.html">
               <img
                 src="https://storage.googleapis.com/media.clinicavisualyauditiva.com/images/2019/11/211fd983-default-user-image.png"
-                class="rounded-circle"
-                height="35"
-                alt="imagen de usuario"
-            /></a>
+                class="rounded-circle" height="35" alt="imagen de usuario" /></a>
           </div>
-        </ul>
+        </div>
+      </div>
       </div>
     </nav>
   </head>
-    <main>
+
+    <main class="mainStyle" style="background-color: #eccdb4">
       
 
       <div class="modal" tabindex="-1" id="miModal">
@@ -187,7 +143,9 @@
       
       <!-- Product section-->
 
-    <section class="py-5 bg-light">
+
+ 
+    <section class="py-5">
       <div class="container px-4 px-lg-5 mt-5">
           <h2 class="fw-bolder mb-4 text-center">Camisas</h2>
           <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center" id="root-products">
@@ -216,7 +174,7 @@
 </div>
 <footer>
   <!-- Footer -->
-  <footer class="text-center text-lg-start bg-white text-muted">
+  <footer class="text-center text-lg-start text-muted" style="background-color: #f9fbe7">
     <!-- Section: Social media -->
     <section
       class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom"
@@ -226,28 +184,25 @@
         <span>Conocenos en nuestras redes:</span>
       </div>
       <!-- Left -->
-
+      
       <!-- Right -->
       <div>
-        <a href="" class="me-4 link-secondary">
+        <a href="https://es-la.facebook.com/" target="_blank" class="me-4 link-secondary ">
           <i class="fab fa-facebook-f"></i>
         </a>
-        <a href="" class="me-4 link-secondary">
+        <a href="https://twitter.com/" target="_blank" class="me-4 link-secondary">
           <i class="fab fa-twitter"></i>
         </a>
-        <a href="" class="me-4 link-secondary">
-          <i class="fab fa-google"></i>
-        </a>
-        <a href="" class="me-4 link-secondary">
+        <a href="https://www.instagram.com/" target="_blank" class="me-4 link-secondary">
           <i class="fab fa-instagram"></i>
         </a>
-        <a href="" class="me-4 link-secondary">
+        <a href="https://www.linkedin.com/" target="_blank" class="me-4 link-secondary">
           <i class="fab fa-linkedin"></i>
         </a>
-        <a href="" class="me-4 link-secondary">
+        <a href="https://github.com/" target="_blank" class="me-4 link-secondary">
           <i class="fab fa-github"></i>
         </a>
-      </div>
+      </div>  
       <!-- Right -->
     </section>
     <!-- Section: Social media -->
@@ -319,7 +274,7 @@
               88
             </p>
             <p>
-              <i class="fas fa-print me-3 text-secondary text-decoration-none"></i> + 01 234 567
+              <i class="fas fa-print me-3 text-secondary"></i> + 01 234 567
               89
             </p>
           </div>

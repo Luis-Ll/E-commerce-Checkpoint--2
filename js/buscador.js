@@ -177,7 +177,7 @@ const productos = [
   function buscarProductos() {
     const buscador = document.getElementById("buscador");
     const resultados = document.getElementById("resultados");
-    const busqueda = buscador.value.toLowerCase();
+    const busqueda = buscador.value.toLowerCase().trim();
 
     if(busqueda != ""){
         console.log("valor del input");
