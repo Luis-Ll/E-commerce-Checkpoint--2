@@ -36,14 +36,59 @@
 
 /**Navbar**/
 
-/* @media screen and (max-width:808px){
-.logo{
-  padding-left: 5%;
-  top: 0px;
-  height: 100%;
+.dropdown {
+  padding-bottom: 1px;
+  padding: 5px;
+}
+li{
+  list-style-type: none;
+  margin: 0%;
+  padding: 0%;
+}
+.navbar-collapse {
+  flex-grow: 0;
+}
+.user {
+  padding-top: 1%;
+  margin: 5px;
+  text-align: right;
+}
+.dropdown{
+  display: inline-block;
+}
+.nav-item{
+  display: inline-block;
+}
+@media (max-width: 768px) {
+  .col-4 {
+    padding-left: 110px;
+  }
+  .text-end {
+    text-align: left !important;
+    padding-left: 100px;
+  }
+}
+@media (min-width: 768px) {
+  .col-md-3 {
+    padding-left: 70px;
+    flex: 0 0 auto;
+    width: 25%;
+  }
+  .col-md-2 {
+    flex: 0 0 auto;
+    width: 21.66666667%;
 }
 }
- */
+
+
+
+
+
+
+
+
+
+
 
 
 /**Footer style**/
